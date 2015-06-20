@@ -32,7 +32,7 @@ cd Lilypond
 rm *.pdf *.midi
 lilypond *.ly 2> /dev/null
 cd ../
-pdfunite capa.pdf Lilypond/*.pdf Partituras.pdf
+pdfunite Capa.pdf Lilypond/*.pdf Partituras.pdf
 printf "pronto.\n"
 
 printf "Removendo arquivos sujeira... "
