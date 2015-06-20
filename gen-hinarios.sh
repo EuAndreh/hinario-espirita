@@ -29,6 +29,7 @@ printf "pronto.\n"
 
 printf "Gerando 'Partituras.pdf'... "
 cd Lilypond
+rm *.pdf *.midi
 lilypond *.ly 2> /dev/null
 cd ../
 pdfunite capa.pdf Lilypond/*.pdf Partituras.pdf
