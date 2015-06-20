@@ -23,4 +23,3 @@ Lembre-se de escrever as cifras no padrão das publicaçṍes do Almir Chediak.
 ## TODO
 - capa
 - website
-- cabeçalho com versão + data
