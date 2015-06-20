@@ -20,7 +20,7 @@ pdflatex Hinário.tex > /dev/null
 printf "pronto.\n"
 
 printf "Gerando 'Transparências.pdf'... "
-pdflatex Transparencias.tex > /dev/null
+pdflatex Transparências.tex > /dev/null
 printf "pronto.\n"
 
 printf "Gerando 'Eslaides.pdf'... "
