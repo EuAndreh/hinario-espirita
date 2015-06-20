@@ -5,9 +5,7 @@
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 \header {
-  title = ""
-  composer = ""
-  subtitle = ""
+  title = "Belo"
   subsubtitle = \date
 }
 
@@ -19,94 +17,45 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 }
 
 global = {
-  \key c \major
-  \time 4/4
-  \dynamicUp % Será isso melhor?
+  \key d \major
+  \time 6/8
+  % \dynamicUp % Será isso melhor?
 }
 
-
-sopMusic = \relative c'' {
-  c2 \p \< d c d \f
+melodia = \relative c' {
+  \clef treble
+  d4.~ d8 d d | d4.~ d8 cis d | fis4.~ fis8 e d | a4.~ a8 d d |
+  d4.~ d8 d d | d4.~ d8 cis d | a'4.~ a8 g fis | e4.~ e4 a8 |
+  a4.~ a8 g a | b8 b4~ b4 a8 | g4.~ g8 e g | a4.~ a4 g8 |
+  fis4.~ fis8 fis fis | fis fis4~ fis8 g fis | e e e e fis e | a( b a g fis e) |
+  \bar "||"
+  d4.~ d8 d d | d4.~ d8 cis d | fis4.~ fis8 e d | a4.~ a8 d d |
+  d4.~ d8 d d | d8 d4~ d8 cis d | a'4.~ a8 g fis | e4.~ e4 a8 |
+  a4.~ a8 g a | b8 b4~ b4 a8 | g4.~ g8 e g | a4.~ a4 g8 |
+  fis4.~ fis8 fis fis | fis4.~ fis4 a8 | g2. | cis, | d |
 }
-sopWords = \lyricmode {
-  do do do do
-}
+letra = \lyricmode {
+  Be -- lo pra mim é cri -- an -- ça_a brin -- car,
+  É ou -- vir mil can -- ções nu -- ma con -- cha de mar,
+  É chu -- va ca -- in -- do, é cam -- po em flor,
+  E,_a -- ci -- ma de tu -- do, é o_a -- mor, é o_a -- mor, é o_a -- mor...
 
-
-altoMusic = \relative c'' {
-  c2\p d c d
-}
-altoWords = \lyricmode {
-  re re re re
-}
-
-
-tenorMusic = {
-  \clef "G_8"
-  c2\mp d c d
-}
-tenorWords = \lyricmode {
-  mi mi mi mi
-}
-
-
-bassMusic = {
-  \clef bass
-  c2\mf d c d
-}
-bassWords = \lyricmode {
-  mi mi mi mi
+  Be -- lo pra mim, quan -- do_es -- tou a so -- frer,
+  É nas tre -- vas da al -- ma que_eu co -- me -- ço_a cres -- cer.
+  Lem -- brar com_a -- le -- gri -- a, que_a -- lém, mui -- to_a -- lém,
+  À_es -- pe -- ra de mim e -- xis -- te_al -- guém.
 }
 
 
 \score {
-<<
-\new ChoirStaff <<
     \new Staff <<
-      \new Voice = "soprano" <<
+      \new Voice = "melodia" <<
         \global
-        \sopMusic
+        \melodia
       >>
-      \lyricsto "soprano" \new Lyrics \sopWords
+      \lyricsto "melodia" \new Lyrics \letra
     >>
-    \new Staff <<
-      \new Voice = "alto" <<
-        \global
-        \altoMusic
-      >>
-      \lyricsto "alto" \new Lyrics \altoWords
-    >>
-    \new Staff <<
-      \new Voice = "tenor" <<
-        \global
-        \tenorMusic
-      >>
-      \lyricsto "tenor" \new Lyrics \tenorWords
-    >>
-    \new Staff <<
-      \new Voice = "bass" <<
-        \global
-        \bassMusic
-      >>
-      \lyricsto "bass" \new Lyrics \bassWords
-    >>
-  >>
-  \new PianoStaff <<
-    \new Staff <<
-      \set Staff.printPartCombineTexts = ##f
-      \partcombine
-      << \global \sopMusic >>
-      << \global \altoMusic >>
-    >>
-    \new Staff <<
-      \clef bass
-      \set Staff.printPartCombineTexts = ##f
-      \partcombine
-      << \global \tenorMusic >>
-      << \global \bassMusic >>
-    >>
-  >>
->>
+
 \layout {}
 \midi {}
 }
