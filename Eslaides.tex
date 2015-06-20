@@ -1,4 +1,5 @@
 \documentclass[letterpaper,oneside,landscape]{article}
+\usepackage[portuguese]{babel}
 \usepackage{pdfpages}
 \usepackage[pdfpagemode=UseThumbs]{hyperref}
 \usepackage{color}
@@ -44,7 +45,8 @@
 }{}
 
 \begin{document}
-\includepdf[pages={1}]{capa.pdf}
+\cfoot{\today}
+\includepdf[pages={1}]{Capa.pdf}
 \begin{songs}{}
 \input{musicas.sbd}
 \end{songs}
