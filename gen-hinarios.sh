@@ -39,7 +39,7 @@ if [ "$1" = "--with-ogg" ]; then
   cd LilyPond
   rm *.ogg
   for midi in $(ls *.midi); do
-    printf "  $midi... "
+    printf "  ${midi%.*}.ogg... "
     timidity $midi -Ov > /dev/null
     printf "pronto.\n"
   done

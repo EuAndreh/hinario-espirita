@@ -35,7 +35,12 @@ Baseie-se no arquivo `template-lilypond.ly` para inserir uma nova partitura.
 Detalhes:
 - O nome do arquivo é livre. Buscando consistência, uso o mesmo padrão que os arquivos LaTeX: letras minúsculas, sem espaços e sem acentos.
 - Seja detalhista quanto às elisões de sílabas e melismas.
+- Se for escrever a partitura de uma música que já existe:
+```shell
+$ ./extrair-letra.sh musicasTex/nome-da-musica.tex
+```
 
+Assim, o arquivo LilyPond da música é criado e a letra já é inserida no local apropriado.
 ## Licença
 [![Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 

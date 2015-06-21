@@ -3,7 +3,7 @@
 \pointAndClickOff
 
 \header {
-  title = ""
+  title = "$titulo"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
     \with-url #"http://euandre.org/hinario-espirita"
@@ -22,7 +22,7 @@ melodia = \relative c' {
 }
 
 letra = \lyricmode {
-  bla
+  $letra
 }
 
 harmonia = \chordmode {
