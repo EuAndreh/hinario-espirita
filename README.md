@@ -51,7 +51,11 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 ## TODO
 - custom domain
 - capa
+- refrões
+- tempos
+- barras de final e divisão
 - índice alfabético+acentos hinário
+- fazer índice de partituras
 - website
   - "Propaganda"
   - Estímulo à divulgação
