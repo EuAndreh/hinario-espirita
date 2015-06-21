@@ -5,6 +5,7 @@ letra=$(perl -pe 's/\\\w+//' $1 | \
     perl -pe 's/\\\[.*?\]//g' | \
     perl -pe 's/\^//g' | \
     perl -pe 's/.*\\bfseries.*//' | \
-    perl -pe 's/\{.*?\}//')
+    perl -pe 's/\{.*?\}//' | \
+    perl -pe 's/$(.*)/  $1/g')
 export titulo letra
 envsubst < template-lilypond.ly > "LilyPond/$(basename $1 .tex).ly"

@@ -1,3 +1,4 @@
 .dropbox
 .sass-cache/*
 LilyPond/*.ogg
+LilyPond/*.pdf
