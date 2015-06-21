@@ -2,3 +2,4 @@
 .sass-cache/*
 LilyPond/*.ogg
 LilyPond/*.pdf
+LilyPond/*.midi
