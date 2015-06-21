@@ -28,7 +28,7 @@ printf "pronto.\n"
 
 printf "Gerando 'Partituras.pdf'... "
 cd LilyPond
-rm *.pdf *.midi *.ogg
+rm *.pdf *.midi
 lilypond *.ly 2> /dev/null
 cd ../
 pdfunite Capa.pdf LilyPond/*.pdf Partituras.pdf
@@ -37,6 +37,7 @@ printf "pronto.\n"
 if [ "$1" = "--with-ogg" ]; then
   printf "Gerando arquivos de áudio Ogg Vorbis...\n"
   cd LilyPond
+  rm *.ogg
   for midi in $(ls *.midi); do
     printf "  $midi... "
     timidity $midi -Ov > /dev/null

@@ -40,6 +40,8 @@ letra = \lyricmode {
   É nas tre -- vas da al -- ma que_eu co -- me -- ço_a cres -- cer.
   Lem -- brar com_a -- le -- gri -- a, que_a -- lém, mui -- to_a -- lém,
   À_es -- pe -- ra de mim e -- xis -- te_al -- guém.
+  
+  Lá lá lá iá, al -- guém, lá lá lá iá, al -- guém.
 }
 
 harmonia = \chordmode {
