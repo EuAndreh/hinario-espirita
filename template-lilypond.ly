@@ -5,6 +5,10 @@
 \header {
   title = ""
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
+  tagline =  \markup {
+    \with-url #"http://euandre.org/hinario-espirita"
+    \line { "euandre.org/hinario-espirita" }
+  }
 }
 
 melodia = \relative c' {
@@ -28,13 +32,9 @@ harmonia = \chordmode {
 
 \score {
   <<
-    \new ChordNames {
-      \harmonia
-    }
+    \new ChordNames { \harmonia }
     \new Staff <<
-      \new Voice = "melodia" <<
-        \melodia
-      >>
+      \new Voice = "melodia" { \melodia }
       \lyricsto "melodia" \new Lyrics \letra
       \set Staff.midiInstrument = #"acoustic grand"
     >>

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 printf "Gerando 'musicas.sbd'... "
-rm musicas.sbd
 for f in $(ls musicasTex); do
   echo "\\include{musicasTex/$f}" | sed -e 's/.tex//' >> "musicas.sbd"
 done
@@ -28,13 +27,25 @@ pdflatex Eslaides.tex > /dev/null
 printf "pronto.\n"
 
 printf "Gerando 'Partituras.pdf'... "
-cd Lilypond
-rm *.pdf *.midi
+cd LilyPond
+rm *.pdf *.midi *.ogg
 lilypond *.ly 2> /dev/null
 cd ../
-pdfunite Capa.pdf Lilypond/*.pdf Partituras.pdf
+pdfunite Capa.pdf LilyPond/*.pdf Partituras.pdf
 printf "pronto.\n"
 
+if [ "$1" = "--with-ogg" ]; then
+  printf "Gerando arquivos de áudio Ogg Vorbis...\n"
+  cd LilyPond
+  for midi in $(ls *.midi); do
+    printf "  $midi... "
+    timidity $midi -Ov > /dev/null
+    printf "pronto.\n"
+  done
+  cd ../
+  printf "pronto.\n"
+fi
+
 printf "Removendo arquivos sujeira... "
-rm *.aux *.out *.log *.sxd *.sbx *.sxc musicasTex/*.aux
+rm *.aux *.out *.log *.sxd *.sbx *.sxc musicasTex/*.aux musicas.sbd
 printf "pronto.\n"
