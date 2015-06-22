@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Hinário espírita com $(ls -l musicasTex/ | wc -l) músicas e $(ls -l LilyPond/*.ly | wc -l) partituras."
+
 printf "Gerando 'musicas.sbd'... "
 for f in $(ls musicasTex); do
   echo "\\include{musicasTex/$f}" | sed -e 's/.tex//' >> "musicas.sbd"

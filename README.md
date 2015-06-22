@@ -56,6 +56,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - barras de final e divisão
 - índice alfabético+acentos hinário
 - fazer índice de partituras
+- segunda voz: astro rei + laláia
 - website
   - "Propaganda"
   - Estímulo à divulgação
