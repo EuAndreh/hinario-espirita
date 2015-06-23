@@ -1,5 +1,5 @@
 \version "2.16.0"
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "A Árvore"
@@ -13,7 +13,7 @@
 melodia = \relative c' {
   \key d \major
   \time 3/4
-  \tempo 4 = 60
+  \tempo 4 = 90
   \clef treble
 
   % 1

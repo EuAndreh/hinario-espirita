@@ -1,5 +1,4 @@
 \version "2.16.0"
-
 \pointAndClickOff
 
 \header {
