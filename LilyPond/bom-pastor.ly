@@ -34,15 +34,12 @@ letra = \lyricmode {
 harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
   r4 | \repeat percent 2 {d2.} a:7 
-  \repeat percent 3 {d} a:7 d
-  \repeat volta 2 {
-    \repeat percent 2 {d} a:7 
-    d
-  }
+  \repeat percent 3 {d} a:7 
+  \repeat percent 3 {d} a:7 
+  d
 }
 
 \score {
-  \unfoldRepeats
   <<
     \new ChordNames { \harmonia }
     \new Staff <<

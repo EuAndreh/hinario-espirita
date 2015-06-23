@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Hinário espírita com $(ls -l musicasTex/ | wc -l) músicas e $(ls -l LilyPond/*.ly | wc -l) partituras."
+echo "Hinário espírita com $(ls -l musicasTex/*.tex | wc -l) músicas e $(ls -l LilyPond/*.ly | wc -l) partituras."
 
 printf "Gerando 'musicas.sbd'... "
 rm musicas.sbd
