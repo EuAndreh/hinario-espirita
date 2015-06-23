@@ -9,29 +9,18 @@ for f in $(ls musicasTex); do
 done
 printf "pronto.\n"
 
-printf "Gerando 'Cifras'.pdf'... "
-pdflatex Cifras.tex > /dev/null
-songidx cbtitle.sxd 2> /dev/null
-pdflatex Cifras.tex > /dev/null
-printf "pronto.\n"
+gen_latex() {
+  printf "Gerando '%b'.pdf... " $1
+  pdflatex "$1.tex" > /dev/null
+  songidx "$1.sxd" 2> /dev/null
+  pdflatex "$1.tex" > /dev/null
+  printf "pronto.\n"
+}
 
-printf "Gerando 'Hinário.pdf'... "
-pdflatex Hinário.tex > /dev/null
-songidx lbtitle.sxd 2> /dev/null
-pdflatex Hinário.tex > /dev/null
-printf "pronto.\n"
-
-printf "Gerando 'Transparências.pdf'... "
-pdflatex Transparências.tex > /dev/null
-songidx tbtitle.sxd 2> /dev/null
-pdflatex Transparências.tex > /dev/null
-printf "pronto.\n"
-
-printf "Gerando 'Eslaides.pdf'... "
-pdflatex Eslaides.tex > /dev/null
-songidx ebtitle.sxd 2> /dev/null
-pdflatex Eslaides.tex > /dev/null
-printf "pronto.\n"
+gen_latex "Hinário"
+gen_latex "Cifras"
+gen_latex "Transparências"
+gen_latex "Eslaides"
 
 printf "Gerando 'Partituras.pdf'...\n"
 cd LilyPond
