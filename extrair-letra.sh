@@ -11,4 +11,4 @@ export titulo letra
 arquivo_ly=$(basename $1 .tex).ly
 envsubst < template-lilypond.ly > "LilyPond/$arquivo_ly"
 
-echo "Arquivo $arquivo_ly gerado."
+echo "Arquivo Lilypond/$arquivo_ly gerado."
