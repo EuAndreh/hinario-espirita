@@ -1,7 +1,6 @@
 \documentclass[letterpaper]{article}
 \usepackage[portuguese]{babel}
 \usepackage{pdfpages}
-\usepackage{fancyhdr}
 \usepackage[bookmarks]{hyperref}
 \usepackage[chorded]{songs}
 \usepackage[utf8]{inputenc}
@@ -17,15 +16,11 @@
 \setlength{\headsep}{0in}
 \setlength{\textheight}{9.1in}
 \settowidth{\versenumwidth}{1.\ }
-\pagestyle{fancy}
 
 \newindex{titleidx}{cbtitle}
 \titleprefixword{}
 \begin{document}
 \includepdf[pages={1}]{Capa.pdf}
-\cfoot{\today}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
 \showindex{Índice de Músicas}{titleidx}
 
 \begin{songs}{titleidx}

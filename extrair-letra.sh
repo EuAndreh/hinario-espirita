@@ -8,4 +8,7 @@ letra=$(perl -pe 's/\\\w+//' $1 | \
     perl -pe 's/\{.*?\}//' | \
     perl -pe 's/$(.*)/  $1/g')
 export titulo letra
-envsubst < template-lilypond.ly > "LilyPond/$(basename $1 .tex).ly"
+arquivo_ly=$(basename $1 .tex).ly
+envsubst < template-lilypond.ly > "LilyPond/$arquivo_ly"
+
+echo "Arquivo $arquivo_ly gerado."

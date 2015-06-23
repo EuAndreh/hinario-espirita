@@ -3,6 +3,7 @@
 echo "Hinário espírita com $(ls -l musicasTex/ | wc -l) músicas e $(ls -l LilyPond/*.ly | wc -l) partituras."
 
 printf "Gerando 'musicas.sbd'... "
+rm musicas.sbd
 for f in $(ls musicasTex); do
   echo "\\include{musicasTex/$f}" | sed -e 's/.tex//' >> "musicas.sbd"
 done
@@ -54,5 +55,5 @@ if [ "$1" = "--with-ogg" ] || [ "$1" = "-o" ]; then
 fi
 
 printf "Removendo arquivos sujeira... "
-rm *.aux *.out *.log *.sxd *.sbx *.sxc musicasTex/*.aux musicas.sbd
+rm *.aux *.out *.log *.sxd *.sbx *.sxc musicasTex/*.aux
 printf "pronto.\n"

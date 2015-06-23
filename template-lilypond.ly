@@ -6,8 +6,8 @@
   title = "$titulo"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
-    \with-url #"http://euandre.org/hinario-espirita"
-    \line { "euandre.org/hinario-espirita" }
+    \with-url #"http://hinarioespirita.com.br"
+    \line { "hinarioespirita.com.br" }
   }
 }
 
