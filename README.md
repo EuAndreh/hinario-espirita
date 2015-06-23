@@ -8,13 +8,17 @@ Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond
 ```shell
 $ git clone https://github.com/EuAndreh/hinario-espirita.git
 $ cd hinario-espirita
-$ chmod +x gen-hinario.sh
-$ ./gen-hinarios.sh
+$ chmod +x hinario.sh 
+$ ./hinarios.sh
+
+# Para produzir partituras
+$ chmod +x partituras.sh
+$ ./partituras.sh
 
 # Para produzir arquivos .ogg
-$ ./gen-hinarios --with-ogg
+$ ./partituras --with-ogg
 # ou
-$ ./gen-hinarios -o
+$ ./partituras -o
 ```
 
 ## Contribuindo
@@ -51,3 +55,4 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 ## TODO
 - fazer índice de partituras
 - repeat volta in midi
+- add date to pages
