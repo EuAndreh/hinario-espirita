@@ -31,7 +31,7 @@ for ly in $(ls *.ly); do
   printf "pronto.\n"
 done
 cd ../
-pdfunite Capa.pdf LilyPond/*.pdf Partituras.pdf
+pdfunite Capa/Capa.pdf LilyPond/*.pdf Partituras.pdf
 printf "pronto.\n"
 
 if [ "$1" = "--with-ogg" ] || [ "$1" = "-o" ]; then
