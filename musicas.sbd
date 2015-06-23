@@ -9,6 +9,7 @@
 \include{musicasTex/arte}
 \include{musicasTex/astro-rei}
 \include{musicasTex/belo}
+\include{musicasTex/bem-viver}
 \include{musicasTex/boa-nova}
 \include{musicasTex/bom-pastor}
 \include{musicasTex/brilhe-a-vossa-luz}
@@ -50,6 +51,7 @@
 \include{musicasTex/na-sua-casa}
 \include{musicasTex/novo-dia}
 \include{musicasTex/obrigado-senhor}
+\include{musicasTex/o-brilho-da-estrela}
 \include{musicasTex/o-dia}
 \include{musicasTex/o-essencial}
 \include{musicasTex/o-fim-da-estrada}
