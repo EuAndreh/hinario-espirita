@@ -12,7 +12,7 @@ printf "pronto.\n"
 gen_latex() {
   printf "Gerando '%b'.pdf... " $1
   pdflatex "$1.tex" > /dev/null
-  songidx "$1.sxd" 2> /dev/null
+  songidx "Indice$(echo $1 | sed 'y/áê/ae/').sxd" 2> /dev/null
   pdflatex "$1.tex" > /dev/null
   printf "pronto.\n"
 }
