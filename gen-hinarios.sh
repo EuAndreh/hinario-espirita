@@ -23,9 +23,13 @@ printf "pronto.\n"
 
 printf "Gerando 'Transparências.pdf'... "
 pdflatex Transparências.tex > /dev/null
+songidx tbtitle.sxd 2> /dev/null
+pdflatex Transparências.tex > /dev/null
 printf "pronto.\n"
 
 printf "Gerando 'Eslaides.pdf'... "
+pdflatex Eslaides.tex > /dev/null
+songidx ebtitle.sxd 2> /dev/null
 pdflatex Eslaides.tex > /dev/null
 printf "pronto.\n"
 

@@ -44,9 +44,12 @@
   \renewcommand{\chorusmark}{\markboth{\thesongnum. \songtitle}{Chorus}}
 }{}
 
+\newindex{titleidx}{ebtitle}
+\titleprefixword{}
 \begin{document}
 \includepdf[pages={1}]{Capa.pdf}
-\begin{songs}{}
+\showindex{Índice de Mùsicas}{titleidx}
+\begin{songs}{titleidx}
 \input{musicas.sbd}
 \end{songs}
 
