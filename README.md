@@ -50,20 +50,8 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 
 ## TODO
 - custom domain
-- capa
-- refrões
-- tempos
-- barras de final e divisão
-- índice alfabético+acentos hinário
 - fazer índice de partituras
-- segunda voz: astro rei + laláia
-- long chord duration + % percent chords repetition
 - lilypond book + index
-- lalaia?
-- website
-  - "Propaganda"
-  - Estímulo à divulgação
-  - Estímulo à contribuição: nome+gravação, hinário + gravação
 - add Banda Nova luz:
   Bem viver
 
