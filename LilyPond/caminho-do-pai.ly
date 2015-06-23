@@ -6,15 +6,15 @@
   title = "A Árvore"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
-    \with-url #"http://euandre.org/hinario-espirita"
-    \line { "euandre.org/hinario-espirita" }
+    \with-url #"http://hinarioespirita.com.br"
+    \line { "hinarioespirita.com.br" }
   }
 }
 
 melodia = \relative c' {
   \key e \major
   \time 6/8
-  \tempo 4 = 60
+  \tempo 4. = 60
   \clef treble
 
   % 1
@@ -24,18 +24,21 @@ melodia = \relative c' {
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis | 
   e4. r4. | r2. | r | r | 
   
+  \bar "||"
   b4. b8 cis dis | e4. e8 fis gis | a4. a8 gis fis | dis4. cis4 cis8 |
   b4. b8 cis dis | e4. e8 fis gis | a4. a8 gis fis | dis4. dis8 e fis |
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis8 e fis |
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis | 
   e4. r4. | r2. | r | r | 
   
+  \bar "||"
   b4. b8 cis dis | e4. e8 fis gis | a4 a8 a gis fis | dis4. cis4 cis8 |
   b4. b8 cis dis | e4. e8 fis gis | a4. a8 gis fis | dis4. dis8 e fis |
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis8 e fis |
   gis4. gis8 a gis | gis gis4 gis8 a gis | fis4. e | fis dis | 
   e4. r4. | r2. | r | r | 
   
+  \bar "||"
   b4. b8 cis dis | e e4 e8 fis gis | a4 a8 a gis fis | dis4. cis4 cis8 |
   b4. b8 cis dis | e4. e8 fis gis | a4. gis4 fis8 | dis4. dis8 e fis |
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis8 e fis |
@@ -90,6 +93,7 @@ harmonia = \chordmode {
   e | gis:min7 | a | b:7 |
   e | gis:min7 | a | b:7 |
   e | cis:min7 | a | b4.:7 a |
+  e
 }
 
 \score {

@@ -1,5 +1,4 @@
 \version "2.16.2"
-
 \pointAndClickOff
 
 \header {
@@ -7,8 +6,8 @@
   composer = "Marcus Vinícius Pereira"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
-    \with-url #"http://euandre.org/hinario-espirita"
-    \line { "euandre.org/hinario-espirita" }
+    \with-url #"http://hinarioespirita.com.br"
+    \line { "hinarioespirita.com.br" }
   }
 
 }
@@ -69,13 +68,13 @@ melodia = \relative c' {
   \clef treble
   \key e \major
   \time 4/4
-  \tempo 4 = 120
+  \tempo 4 = 100
 
    \partial 4. b8 e fis |
    gis4 gis8 gis gis fis e fis | gis4 e4 r8 e8 a gis | cis,4 cis8 e dis dis gis fis | b,2 r8 b8 e fis |
-   gis4 gis8 gis gis fis e fis | gis4 e r8 e a fis | cis4 cis8 e dis dis gis fis | e2 r8 b8 e fis |
+   gis4 gis8 gis gis fis e fis | gis4 e r8 e a gis | cis,4 cis8 e dis dis gis fis | e2 r8 b8 e fis |
 
-   gis4 gis8 gis gis fis e fis | gis4 e r8 e8 a fis | cis4 cis8 e dis dis gis fis | b,2 r8 b e fis |
+   gis4 gis8 gis gis fis e fis | gis4 e r8 e8 a gis | cis,4 cis8 e dis dis gis fis | b,2 r8 b e fis |
    gis4 gis8 gis gis fis e fis | gis( b) gis4 r8 e8 a gis | cis,4 cis8 e dis dis gis fis | e2 r8 e8 a b \bar "||"
 
    cis4 cis8 cis cis b a b | cis4 cis4 r8 a8 a cis | b4. cis8 b a gis a | b2 r8 e,8 e b' |
@@ -85,7 +84,7 @@ melodia = \relative c' {
    a4 a8 a a gis fis gis | a4 fis r8 b,8 b a' | gis4. a8 fis e dis fis | e2 r8 b8 e fis \bar "||"
 
    gis4 gis8 gis gis fis e fis | gis4 e4 r8 e8 a gis | cis,4 cis8 e dis dis gis fis | b,2 r8 b8 e fis |
-   gis4 gis8 gis gis fis e fis | gis( b) e,4 r8 e a fis | cis4 cis8 e dis dis gis fis | e1 \bar "||"
+   gis4 gis8 gis gis fis e fis | gis( b) e,4 r8 e a gis | cis,4 cis8 e dis dis gis fis | e1 \bar "||"
 }
 
 \score {

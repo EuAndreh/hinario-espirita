@@ -1,13 +1,12 @@
 \version "2.16.0"
-
 \pointAndClickOff
 
 \header {
   title = "O Fim da Estrada"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
-    \with-url #"http://euandre.org/hinario-espirita"
-    \line { "euandre.org/hinario-espirita" }
+    \with-url #"http://hinarioespirita.com.br"
+    \line { "hinarioespirita.com.br" }
   }
 }
 
@@ -17,7 +16,6 @@ melodia = \relative c'' {
   \tempo 4 = 140
   \clef treble
 
-  % 1
   % Primeira estrofe
   r4 b8 a4 b g8~ | g4 b8 a4 b fis8~ | fis1 |
   g8 g4 g4. e4 |
@@ -35,9 +33,9 @@ melodia = \relative c'' {
   g4 g8 g~ g4 fis | a1~ | a \bar "||"
 
   % Refrão 1
-  r4 \repeat volta 2 { b8 a4 b4. | r4 b8 a4 b4. | r4 c8 c c c4 d8 | b2 b4 g |
+  r4 b8 a4 b4. | r4 b8 a4 b4. | r4 c8 c c c4 d8 | b2 b4 g |
   g4 b8 a4 b4. | r4 b8 a4 b4. | r4 c8 c c c4 d8 | b4. a4 b g8 |
-  g4~ } g2.~ | g1 |
+  g4~ g2.~   \mark \markup { \musicglyph #"scripts.segno" } \bar "||" g1 |
 
   \compressFullBarRests
   R1*7
@@ -53,7 +51,10 @@ melodia = \relative c'' {
   % Refrão 2
   r4 \repeat volta 2 { b8 a4 b4. | r4 b8 a4 b4. | \times 2/3 { c4 c c } c8 c4 d8 | b4. a4 b g8 |
   g4 b8 a4( b4.) | r8 b4 a b4. | r4 c8 c c c4 d8 | b4. a4 b g8 |
-  g4~ } \repeat volta 2 { g2.~ |
+  s1*0^\markup { \center-column { "D.S. al fine" } }
+  g4~ }
+
+  \repeat volta 2 { g2.~ |
   g1 |
   r4 c8 c c c4 d8 | b4. a4 b g8 | g4~ } g2.
   \bar "||"
@@ -102,7 +103,7 @@ harmonia = \chordmode {
 
   % Interlúdio 1
   c:maj7 b:m7 c:maj7 b:m7
-  c:maj7 b:m7 c:maj7.9 \repeat percent 2 {c:m6}
+  c:maj7 b:m7 c:maj7 \repeat percent 2 {c:m6}
 
   % Interlúdio 2
   \repeat percent 2 {a:m7} \repeat percent 2 {b:m7} \repeat percent 2 {c:6} \repeat percent 2 {d:7.9}

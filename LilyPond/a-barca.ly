@@ -1,39 +1,45 @@
 \version "2.16.0"
-
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "A Árvore"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
-    \with-url #"http://euandre.org/hinario-espirita"
-    \line { "euandre.org/hinario-espirita" }
+    \with-url #"http://hinarioespirita.com.br"
+    \line { "hinarioespirita.com.br" }
   }
 }
 
 melodia = \relative c' {
   \key d \major
   \time 6/8
-  \tempo 4 = 60
+  \tempo 4. = 60
   \clef treble
 
   % 1
   fis2. | r8 e8 fis g fis e | d4. d | r4. d4 d8 |
   g4. g | r4 g8 g fis g | e4. e | r4 a,8 d4 e8 |
-  fis4. fis | r4 fis8 g4 e8 | d4. d |
+  fis4. fis | r4 fis8 g4 e8 | d4. d \bar "||" 
+  \mark \markup { \musicglyph #"scripts.segno" }
 
   r4. d4. | b'2. | r8 b8 cis d cis b | a4. a |
   r4. g4 fis8 | g2. | r8 g8 a b a g | fis4. fis |
   r4. d4 d8 | b'4. b | r8 b8 cis d cis b | a4. a |
-  r4. g4 fis8 | g2. | r8 e8 fis g fis e | d2. | r2. |
+  r4. g4 fis8 | g2. | r8 e8 fis g fis e | d2. | r2. 
+  \mark \markup { \musicglyph #"scripts.coda" }
+  \bar "||"
 
   fis2. | r8 e8 fis g fis e | d4. d | r4. d4 d8 |
   g4. g | r4 g8 g fis g | e4. e | r4 a,8 d4 e8 |
-  fis4. fis | r4 fis8 g4 e8 | d4. d |
+  fis4. fis | r4 fis8 g4 e8 | d4. d \bar "||" 
+  r2. \bar "||"
+  s1*0^\markup { \right-align {"D.S. al Coda" }}
 
   fis2. | r8 e8 fis g fis e | d4. d | r4. d4 d8 |
   g4. g | r4 g8 g fis g | e4. e | r4 a,8 d4 e8 |
-  fis4. fis | r4 fis8 g4 e8 | d4. d |
+  fis4. fis | r4 fis8 g4 e8 | d4. d \bar "||"
+  s1*1^\markup {"D.S. al Coda" }
+  \bar "||"
 }
 
 letra = \lyricmode {
@@ -57,7 +63,27 @@ letra = \lyricmode {
 
 harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
+
+  % Estrofe 1
   d2.: | a:7 | d | d:7 
+  \repeat percent 2 {g} \repeat percent 2 {a:7}
+  d | a:7 | d | d:7 |
+
+  % Refrão
+  \repeat percent 2 {g} | d | b:m7 |
+  e:m7 | a:7 | d | d:7 |
+  \repeat percent 2 {g} | d | b:m7 |
+  e:m7 | a:7 | d | a:7 |
+  
+  % Estrofe 2
+  d2.: | a:7 | d | d:7 
+  \repeat percent 2 {g} \repeat percent 2 {a:7}
+  d | a:7 | \repeat percent 2 {d}
+
+  % Estrofe 3
+  d2.: | a:7 | d | d:7 
+  \repeat percent 2 {g} \repeat percent 2 {a:7}
+  d | a:7 | d | 
 }
 
 \score {

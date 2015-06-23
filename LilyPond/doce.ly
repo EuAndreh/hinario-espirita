@@ -1,20 +1,19 @@
 \version "2.16.0"
-
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "Doce"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
-    \with-url #"http://euandre.org/hinario-espirita"
-    \line { "euandre.org/hinario-espirita" }
+    \with-url #"http://hinarioespirita.com.br"
+    \line { "hinarioespirita.com.br" }
   }
 }
 
 melodia = \relative c' {
   \key c \major
   \time 4/4
-  \tempo 4 = 60
+  \tempo 4 = 72
   \clef treble
 
   % 1
@@ -27,15 +26,18 @@ melodia = \relative c' {
  
   %17
   r4 e4 f g | e2 e4. e8 | d4 c d4. f8 | e1 |
-  r4 e4 f g | e2.. e8 | d4 c d4. c8 | c1 |
-  
-  
+  r4 e4 f g | e2.. e8 | d4 c d4. c8 | c1 
+  \mark \markup { \musicglyph #"scripts.coda" }
+  \bar "||"
+
   c2 e4 f | g2 g | a4 g f a | g2 g|
   c2 b4 a | g2 e | f4 f e d | c2 c |
   
   c2 e4 f | g2 g4. g8 | a4 g f a | g2 g|
   c2 b4 a | g2 e4. e8 | f4 f e d | c2 c |
-  c'2 b4 a | g2 e4. e8 | f4 f e d | c2 c |
+  c'2 b4 a | g2 e4. e8 | f4 f e d | c2 c \bar "||"
+  s1*1^\markup {"D.S. al Coda" }
+  \bar "||"
 }
 
 letra = \lyricmode {
@@ -58,22 +60,21 @@ harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
   % 1
   c1 | e:m | f2 g:7 | c1 | 
-  c1 | e:m | f2 g:7 | c1 |
+  a1:m | e:m | f2 g:7 | \repeat percent 2 {c1} |
 
-  % 9
-  c1 | e:m | f2 g:7 | c1 | 
-  a:m | e:m | f2 g:7 | c1 |
-  
+  e:m | f2 g:7 | c1 | 
+  a:m | e:m | f2 g:7 | c1 
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
+
   % 17
   a:m | e:m | f2 g:7 | c1 |
-  a:m | e:m | f2 g:7 | c1 |
+  a:m | e:m | f2 g:7 | \repeat percent 2 {c1} |
 
-  % 25
-  c1 | e:m | f2 g:7 | c1 | 
-  a:m | e:m | f2 g:7 | c1 |
+  | e:m | f2 g:7 | c1 | 
+  a:m | e:m | f2 g:7 | \repeat percent 2 {c1} |
   
-  % 33
-  c1 | e:m | f2 g:7 | c1 | 
+  e:m | f2 g:7 | c1 | 
   a:m | e:m | f2 g:7 | c1 |
   a:m | e:m | f2 g:7 | c1 |
 }

@@ -66,3 +66,8 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
   - Estímulo à contribuição: nome+gravação, hinário + gravação
 - add Banda Nova luz:
   Bem viver
+
+- repeat volta in midi
+
+lilypond book
+cifra 9 com 7 implicita
