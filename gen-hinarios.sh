@@ -9,10 +9,10 @@ for f in $(ls musicasTex); do
 done
 printf "pronto.\n"
 
-printf "Gerando 'Hinario Cifrado.pdf'... "
-pdflatex Hinário\ Cifrado.tex > /dev/null
+printf "Gerando 'Cifras'.pdf'... "
+pdflatex Cifras.tex > /dev/null
 songidx cbtitle.sxd 2> /dev/null
-pdflatex Hinário\ Cifrado.tex > /dev/null
+pdflatex Cifras.tex > /dev/null
 printf "pronto.\n"
 
 printf "Gerando 'Hinário.pdf'... "
