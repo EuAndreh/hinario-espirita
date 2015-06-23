@@ -22,7 +22,7 @@ Se você gostaria de contribuir, inclua a gravação (na qualidade que for - at�
 
 Se for escrever tanto a partitura quanto a cifra, esforce-se ao máximo para que o tempo das cifras em ambos fique igual.
 
-Lembre-se de escrever as cifras no padrão das publicações do Almir Chediak.
+Lembre-se de escrever as cifras seguindo o padrão já estabelecido.
 
 ### LaTeX
 Baseie-se no arquivo `template-latex.tex` para inserir uma nova música.
@@ -49,13 +49,10 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 [![Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ## TODO
-- custom domain
 - fazer índice de partituras
-- lilypond book + index
+- repeat volta in midi
+
 - add Banda Nova luz:
   Bem viver
 
-- repeat volta in midi
 
-lilypond book
-cifra 9 com 7 implicita

@@ -2,7 +2,7 @@
 \pointAndClickOff
 
 \header {
-  title = "A Árvore"
+  title = "A Barca"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
     \with-url #"http://hinarioespirita.com.br"
