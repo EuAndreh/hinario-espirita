@@ -55,3 +55,4 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 ## TODO
 - fazer índice de partituras
 - repeat volta in midi
+- Add favicon
