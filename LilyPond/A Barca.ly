@@ -9,37 +9,36 @@
     \line { "hinarioespirita.com.br" }
   }
 }
-
-melodia = \relative c' {
+global = {
   \key d \major
   \time 6/8
   \tempo 4. = 60
   \clef treble
+}
 
-  % 1
+introToSegno = \relative c' {
   fis2. | r8 e8 fis g fis e | d4. d | r4. d4 d8 |
   g4. g | r4 g8 g fis g | e4. e | r4 a,8 d4 e8 |
-  fis4. fis | r4 fis8 g4 e8 | d4. d \bar "||" 
-  \mark \markup { \musicglyph #"scripts.segno" }
+  fis4. fis | r4 fis8 g4 e8 | d4. d 
+}
 
+segnoToCoda = \relative c' {
   r4. d4. | b'2. | r8 b8 cis d cis b | a4. a |
   r4. g4 fis8 | g2. | r8 g8 a b a g | fis4. fis |
   r4. d4 d8 | b'4. b | r8 b8 cis d cis b | a4. a |
   r4. g4 fis8 | g2. | r8 e8 fis g fis e | d2. | r2. 
-  \mark \markup { \musicglyph #"scripts.coda" }
-  \bar "||"
+}
 
+estrofeDois = \relative c' {
   fis2. | r8 e8 fis g fis e | d4. d | r4. d4 d8 |
   g4. g | r4 g8 g fis g | e4. e | r4 a,8 d4 e8 |
-  fis4. fis | r4 fis8 g4 e8 | d4. d \bar "||" 
-  r2. \bar "||"
-  s1*0^\markup { \right-align {"D.S. al Coda" }}
+  fis4. fis | r4 fis8 g4 e8 | d4. d 
+}
 
+estrofeTres = \relative c' {
   fis2. | r8 e8 fis g fis e | d4. d | r4. d4 d8 |
   g4. g | r4 g8 g fis g | e4. e | r4 a,8 d4 e8 |
-  fis4. fis | r4 fis8 g4 e8 | d4. d \bar "||"
-  s1*1^\markup {"D.S. al Coda" }
-  \bar "||"
+  fis4. fis | r4 fis8 g4 e8 | d4. d 
 }
 
 letra = \lyricmode {
@@ -61,40 +60,93 @@ letra = \lyricmode {
   Bon -- do -- so_a -- mi -- go, que_as -- sim me cha -- mas.
 }
 
-harmonia = \chordmode {
-  \set majorSevenSymbol = \markup { 7M }
-
-  % Estrofe 1
+introToSegnoChords = \chordmode {
   d2.: | a:7 | d | d:7 
   \repeat percent 2 {g} \repeat percent 2 {a:7}
-  d | a:7 | d | d:7 |
+  d | a:7 | d 
+}
 
-  % Refrão
-  \repeat percent 2 {g} | d | b:m7 |
+segnoToCodaChords = \chordmode {
+  d:7  \repeat percent 2 {g} | d | b:m |
   e:m7 | a:7 | d | d:7 |
-  \repeat percent 2 {g} | d | b:m7 |
+  \repeat percent 2 {g} | d | b:m |
   e:m7 | a:7 | d | a:7 |
-  
-  % Estrofe 2
-  d2.: | a:7 | d | d:7 
-  \repeat percent 2 {g} \repeat percent 2 {a:7}
-  d | a:7 | \repeat percent 2 {d}
+}
 
-  % Estrofe 3
+estrofeDoisChords = \chordmode {
   d2.: | a:7 | d | d:7 
   \repeat percent 2 {g} \repeat percent 2 {a:7}
-  d | a:7 | d | 
+  d | a:7 | d
+}
+
+estrofeTresChords = \chordmode {
+  d2.: | a:7 | d | d:7 
+  \repeat percent 2 {g} \repeat percent 2 {a:7}
+  d | a:7 | d 
 }
 
 \score {
   <<
-    \new ChordNames { \harmonia }
+    \new ChordNames { 
+      \introToSegnoChords
+      \segnoToCodaChords
+      \estrofeDoisChords
+      \estrofeTresChords
+      d 
+    }
     \new Staff <<
-      \new Voice = "melodia" { \melodia }
+      \new Voice = "melodia" { 
+        \global
+        
+        \introToSegno
+        
+        \mark \markup { \musicglyph #"scripts.segno" }
+        \bar "."
+        \segnoToCoda
+        \bar "."
+        \mark \markup { \musicglyph #"scripts.coda" }
+        
+        \estrofeDois
+        \bar "."
+        \mark \markup { \center-align { \musicglyph #"scripts.segno" "al" \musicglyph #"scripts.coda" }}
+        \estrofeTres
+        \bar "."
+        \mark \markup { \center-align { \musicglyph #"scripts.segno" "al" \musicglyph #"scripts.coda" }}
+        r
+        \bar "|."
+      }
       \lyricsto "melodia" \new Lyrics \letra
       \set Staff.midiInstrument = #"acoustic grand"
     >>
   >>
   \layout {}
+}
+
+\score {
+  \unfoldRepeats
+  <<
+    \new ChordNames { 
+      \introToSegnoChords
+      \segnoToCodaChords
+      \estrofeDoisChords
+      \segnoToCodaChords
+      \estrofeTresChords
+      \segnoToCodaChords
+      d
+    }
+    \new Staff <<
+      \new Voice = "melodia" { 
+        \global
+        \introToSegno
+        \segnoToCoda
+        \estrofeDois
+        \segnoToCoda
+        \estrofeTres
+        \segnoToCoda
+      }
+      \lyricsto "melodia" \new Lyrics \letra
+      \set Staff.midiInstrument = #"acoustic grand"
+    >>
+  >>
   \midi {}
 }

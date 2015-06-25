@@ -1,5 +1,5 @@
 \version "2.16.0"
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "O Fim da Estrada"

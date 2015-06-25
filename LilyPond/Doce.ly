@@ -10,34 +10,33 @@
   }
 }
 
-melodia = \relative c' {
+global = {
   \key c \major
   \time 4/4
   \tempo 4 = 72
   \clef treble
+}
 
-  % 1
+introToSegno = \relative c' {
   c2 e4 f | g1 | a4 g f a | g2( e)|
   c'2 b4 a | g2 e | f4 f e d | c1 |
   
-  % 9
   c2 e4 f | g1 | a4 g f a | g2 g|
-  c2 b4 a | g2 e | f4 f e d | c2 c |
- 
-  %17
+  c2 b4 a | g2 e | f4 f e d | c2 c 
+}
+
+segnoToCoda = \relative c' {
   r4 e4 f g | e2 e4. e8 | d4 c d4. f8 | e1 |
   r4 e4 f g | e2.. e8 | d4 c d4. c8 | c1 
-  \mark \markup { \musicglyph #"scripts.coda" }
-  \bar "||"
+}
 
+codaToEnd = \relative c' {
   c2 e4 f | g2 g | a4 g f a | g2 g|
   c2 b4 a | g2 e | f4 f e d | c2 c |
   
   c2 e4 f | g2 g4. g8 | a4 g f a | g2 g|
   c2 b4 a | g2 e4. e8 | f4 f e d | c2 c |
-  c'2 b4 a | g2 e4. e8 | f4 f e d | c2 c \bar "||"
-  s1*1^\markup {"D.S. al Coda" }
-  \bar "||"
+  c'2 b4 a | g2 e4. e8 | f4 f e d | c2 c
 }
 
 letra = \lyricmode {
@@ -56,22 +55,21 @@ letra = \lyricmode {
   Fon -- te de vi -- da de Su -- a cri -- a -- tu -- ra.
 }
 
-harmonia = \chordmode {
-  \set majorSevenSymbol = \markup { 7M }
-  % 1
+introToSegnoChords = \chordmode {
   c1 | e:m | f2 g:7 | c1 | 
   a1:m | e:m | f2 g:7 | \repeat percent 2 {c1} |
 
   e:m | f2 g:7 | c1 | 
   a:m | e:m | f2 g:7 | c1 
-  \mark \markup { \musicglyph #"scripts.segno" }
-  \bar "||"
+}
 
-  % 17
+segnoToCodaChords = \chordmode {
   a:m | e:m | f2 g:7 | c1 |
-  a:m | e:m | f2 g:7 | \repeat percent 2 {c1} |
+  a:m | e:m | f2 g:7 | c1
+}
 
-  | e:m | f2 g:7 | c1 | 
+codaToEndChords = \chordmode {
+  c | e:m | f2 g:7 | c1 | 
   a:m | e:m | f2 g:7 | \repeat percent 2 {c1} |
   
   e:m | f2 g:7 | c1 | 
@@ -81,13 +79,54 @@ harmonia = \chordmode {
 
 \score {
   <<
-    \new ChordNames { \harmonia }
+    \new ChordNames { 
+      \set majorSevenSymbol = \markup { 7M }
+      \introToSegnoChords
+      \segnoToCodaChords
+      \codaToEndChords
+    }
     \new Staff <<
-      \new Voice = "melodia" { \melodia }
+      \new Voice = "melodia" { 
+        \global
+        
+        \introToSegno
+        
+        \mark \markup { \musicglyph #"scripts.segno" }
+        \bar "."
+        \segnoToCoda
+        \bar "."
+        \mark \markup { \musicglyph #"scripts.coda" }
+        
+        \codaToEnd
+        \mark \markup { \center-align { \musicglyph #"scripts.segno" "al" \musicglyph #"scripts.coda" }}
+        \bar "|."
+      }
       \lyricsto "melodia" \new Lyrics \letra
       \set Staff.midiInstrument = #"acoustic grand"
     >>
   >>
   \layout {}
+}
+
+\score {
+  <<
+    \new ChordNames { 
+      \introToSegnoChords
+      \segnoToCodaChords
+      \codaToEndChords
+      \segnoToCodaChords
+    }
+    \new Staff <<
+      \new Voice = "melodia" { 
+        \global
+        \introToSegno
+        \segnoToCoda
+        \codaToEnd
+        \segnoToCoda
+      }
+      \lyricsto "melodia" \new Lyrics \letra
+      \set Staff.midiInstrument = #"acoustic grand"
+    >>
+  >>
   \midi {}
 }

@@ -1,5 +1,3 @@
 .dropbox
 .sass-cache/*
-LilyPond/*.ogg
-LilyPond/*.pdf
-LilyPond/*.midi
+Partituras/*

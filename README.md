@@ -60,8 +60,3 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Explícitar que é um download.
 - Tamanho da fonte do autor
 - Consertar barras de separação
-
-## To Fix Midi
-- A barca
-- Doce
-- O Fim da Estrada
