@@ -52,9 +52,10 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 [![Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ## TODO
-- fazer índice de partituras
+// - fazer índice de partituras
 - Add favicon
 - Slides vs Eslaides
-- Tìtulo da música clicável
+// ... - Tìtulo da música clicável
 - Explícitar que é um download.
 - Consertar índice com prefixo "A" etc. + acentos
+- Midi no Frescobaldi
