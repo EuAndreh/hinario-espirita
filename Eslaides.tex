@@ -7,6 +7,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+\usepackage{etoolbox}
+\patchcmd{\showauthors}{\bfseries}{\itshape\normalsize}{}{}
+
 \setlength{\oddsidemargin}{-0.5in}
 \setlength{\evensidemargin}{-0.5in}
 \setlength{\textwidth}{10in}
