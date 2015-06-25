@@ -1,9 +1,8 @@
 \version "2.16.0"
-
 %\pointAndClickOff
 
 \header {
-  title = "A Árvore"
+  title = "Caminho do Pai"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
     \with-url #"http://hinarioespirita.com.br"
@@ -43,7 +42,7 @@ melodia = \relative c' {
   b4. b8 cis dis | e4. e8 fis gis | a4. gis4 fis8 | dis4. dis8 e fis |
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis8 e fis |
   gis4. gis8 a gis | gis4. gis8 a gis | fis4. e | fis dis | 
-  e4. r4. | r2. | r | r | 
+  e4. r4. | r2. | r | r | r \bar "|."
 }
 
 letra = \lyricmode {

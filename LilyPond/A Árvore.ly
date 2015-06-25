@@ -53,14 +53,16 @@ letra = \lyricmode {
   Des -- se mo -- do mos -- tro_aos ho -- mens  
   U -- ma ma -- nei -- ra de_a -- mar.  
     
-  Meu me -- ni -- no, não se zan -- gue  
+  Meu me -- 
+  \repeat volta 2 {
+  ni -- no, não se zan -- gue  
   Com al -- guém que_o mal -- tra -- tar  
   Se vo -- cê qui -- ser ser gran -- de  
-  De -- ve sa -- ber per -- do -- ar.  
-
-  % \alternatives
-  Meu me
-  sa -- ber per -- do -- ar.
+  De -- ve }
+  \alternative {
+    { sa -- ber per -- do -- ar.  Meu me -- }
+    { sa -- ber per -- do -- ar. }
+  }
 }
 
 harmonia = \chordmode {
@@ -68,14 +70,16 @@ harmonia = \chordmode {
   r4 | d2. | a  b:m fis:m g d \repeat percent 2 {a:7}
   b:m fis:m g fis:m g d \repeat percent 2 {a:7}
   b:m fis:m g fis:m g d \repeat percent 2 {a:7}
-  b:m fis:m g fis:m g d \repeat percent 2 {a:7}
-  
-  % \alternatives
-  a:7 d
+  \repeat volta 2 {
+    b:m fis:m g fis:m g d 
+  }
+  \alternative {
+    { \repeat percent 2 {a:7} }
+    { a:7 d }
+  }
 }
 
-\score {
-  <<
+musica = <<
     \new ChordNames { \harmonia }
     \new Staff <<
       \new Voice = "melodia" { \melodia }
@@ -83,6 +87,14 @@ harmonia = \chordmode {
       \set Staff.midiInstrument = #"acoustic grand"
     >>
   >>
+
+\score {
+  \musica
   \layout {}
+}
+
+\score {
+  \unfoldRepeats
+  \musica
   \midi {}
 }

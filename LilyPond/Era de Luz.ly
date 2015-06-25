@@ -1,5 +1,5 @@
 \version "2.16.2"
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "Era de Luz"
@@ -33,11 +33,16 @@ harmonia = \chordmode {
   d:maj7 a/cis b:m7.9 e2:7sus4.9 e2:7.9
 
   % Refrão
-  d1:maj7 e:7 cis:m7 fis:m7
-  d:maj7 e:7 fis:7sus4.9 fis:7.9
-  d:maj7 e:7 cis:m7 fis:m7
-  b:m7.9 e2:7sus4.9 e:7.9 a1:6 a:7.13- a:6
-
+  \repeat volta 2 {
+    d1:maj7 e:7 cis:m7 fis:m7
+    d:maj7 e:7 fis:7sus4.9 fis:7.9
+    d:maj7 e:7 cis:m7 fis:m7
+    b:m7.9 e2:7sus4.9 e:7.9 a1:6
+  }
+  \alternative {
+    { a:7.13- }
+    { a:6 }
+  }
 }
 
 letra = \lyricmode {
@@ -103,12 +108,12 @@ melodia = \relative c' {
     r2 e8 d cis d~ | d cis4 b a a8~ | a1 | }
   \alternative {
    { r1 | }
-   { r1 | }}
-    \bar "||"
+   { r1 | }
+  }
+    \bar "|."
 }
 
-\score {
-  <<
+musica = <<
     \new ChordNames { \harmonia }
     \new Staff <<
       \new Voice = "melodia" { \melodia }
@@ -116,7 +121,16 @@ melodia = \relative c' {
       \set Staff.midiInstrument = #"acoustic grand"
     >>
   >>
+
+\score {
+  %\unfoldRepeats
+  \musica
   \layout {}
+}
+
+\score {
+  \unfoldRepeats
+  \musica
   \midi {}
 }
 

@@ -32,15 +32,14 @@ Lembre-se de escrever as cifras seguindo o padrão já estabelecido.
 Baseie-se no arquivo `template-latex.tex` para inserir uma nova música.
 
 Detalhes:
-- O nome do arquivo não deve possuir espaços nem acentos. De preferência, usar somente letras minúsculas. Já o nome da música dentro do `\beginsong{}` no arquivo pode ter tanto acentos quanto espaços.
 - Se possível, ajuste o valor `\Huge` para `\LARGE` ou `\Large` na segunda linha do `template-latex.tex` para que a música ocupe apenas 1 página no arquivo `Transparências.pdf`.
 
 ### LilyPond
 Baseie-se no arquivo `template-lilypond.ly` para inserir uma nova partitura.
 
 Detalhes:
-- O nome do arquivo é livre. Buscando consistência, uso o mesmo padrão que os arquivos LaTeX: letras minúsculas, sem espaços e sem acentos.
 - Seja detalhista quanto às elisões de sílabas e melismas.
+- Lembre-se de marcar as voltas e repetições tanto na melodia, quanto na harmonia.
 
 Se for escrever a partitura de uma música que já existe:
 ```shell
@@ -56,4 +55,13 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - fazer índice de partituras
 - repeat volta in midi
 - Add favicon
+- Slides vs Eslaides
+- Tìtulo da música clicável
+- Explícitar que é um download.
+- Tamanho da fonte do autor
+- Consertar barras de separação
 
+## To Fix Midi
+- A barca
+- Doce
+- O Fim da Estrada

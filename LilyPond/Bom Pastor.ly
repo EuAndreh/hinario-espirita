@@ -1,5 +1,5 @@
 \version "2.16.0"
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "Bom Pastor"
@@ -28,19 +28,21 @@ letra = \lyricmode {
   Com e -- le an -- da -- rei.  
   Con -- duz me_a cal -- mas á -- guas,  
   Com e -- le an -- da -- rei.  
-  Sem -- pre, sem -- pre, com e -- le an -- da -- rei. 
+  \repeat volta 2 {
+    Sem -- pre, sem -- pre, com e -- le an -- da -- rei. 
+  }
 }
 
 harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
-  r4 | \repeat percent 2 {d2.} a:7 
+  s4 | \repeat percent 2 {d2.} a:7 
   \repeat percent 3 {d} a:7 
-  \repeat percent 3 {d} a:7 
-  d
+  d2 \repeat volta 2 {
+    s4 \repeat percent 2 {s2.} a:7 d2 
+  }
 }
 
-\score {
-  <<
+musica = <<
     \new ChordNames { \harmonia }
     \new Staff <<
       \new Voice = "melodia" { \melodia }
@@ -48,6 +50,14 @@ harmonia = \chordmode {
       \set Staff.midiInstrument = #"acoustic grand"
     >>
   >>
+
+\score {
+  \musica
   \layout {}
+}
+
+\score {
+  \unfoldRepeats
+  \musica
   \midi {}
 }
