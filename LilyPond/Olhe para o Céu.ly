@@ -30,7 +30,7 @@ melodia = \relative c' {
   bes2 r8 f16 f bes8 a | a8. g16~ g8 g16 f a8. g16~( g4 |
   
   a2) f8. e f8 | e8. d16~ d2 r8 d8 | d2. r8 d8 | d2. r8 d8 | d2( cis) |
-  r4 f16 e d e f8( e f4~ | f1) \bar "||"
+  r4 f16 e d e f8( e f4~ | f1) \bar "|."
 }
 
 letra = \lyricmode {

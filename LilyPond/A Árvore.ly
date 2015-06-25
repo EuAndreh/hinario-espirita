@@ -34,7 +34,7 @@ melodia = \relative c' {
     { e4 e e8 fis | e2 a8 a | }
     { e4 e d8 cis | d2. }
   }
-  \bar "||"
+  \bar "|."
 }
 
 letra = \lyricmode {
@@ -63,6 +63,7 @@ letra = \lyricmode {
     { sa -- ber per -- do -- ar.  Meu me -- }
     { sa -- ber per -- do -- ar. }
   }
+  
 }
 
 harmonia = \chordmode {

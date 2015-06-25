@@ -26,7 +26,7 @@ melodia = \relative c' {
   a4.~ a8 fis e | d4.~ d8 g a | b4.~ b8 g fis | e4.~ e8 fis g |
   a4.~ a8 fis e | d4.~ d8 g a | b4.~ b8 g fis | e4.~ e8 fis e |
   d4.~ d8 fis e | d4.~ d8 fis e | d4.~ d8 g fis | e4.~ e8 fis e |
-  d4.~ d8 fis e | d4.~ d8 fis e | d2. | fis4. e | d2. \bar "||"
+  d4.~ d8 fis e | d4.~ d8 fis e | d2. | fis4. e | d2. \bar "|."
 }
 
 letra = \lyricmode {

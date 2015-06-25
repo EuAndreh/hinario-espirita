@@ -1,5 +1,5 @@
 \version "2.16.0"
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "O Fim da Estrada"
@@ -57,7 +57,7 @@ melodia = \relative c'' {
   \repeat volta 2 { g2.~ |
   g1 |
   r4 c8 c c c4 d8 | b4. a4 b g8 | g4~ } g2.
-  \bar "||"
+  \bar "|."
 }
 
 letra = \lyricmode {

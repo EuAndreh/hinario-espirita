@@ -1,5 +1,5 @@
 \version "2.16.0"
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "Bom Pastor"
@@ -20,7 +20,7 @@ melodia = \relative c' {
   \partial 4 a4 |
   d d fis8 e | d4 a fis' | e8 d e4 fis | d2 a4 |
   d d fis8 e | d4 a fis' | e8 d e4 fis | d2 \repeat volta 2 { a'4 |
-  fis2 a4 | fis2 a4 | g8 fis g4 a | fis2 } r4 \bar "||"
+  fis2 a4 | fis2 a4 | g8 fis g4 a | fis2 } r4 \bar "|."
 }
 
 letra = \lyricmode {

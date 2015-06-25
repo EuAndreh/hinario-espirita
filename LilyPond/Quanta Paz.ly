@@ -84,7 +84,7 @@ melodia = \relative c' {
    a4 a8 a a gis fis gis | a4 fis r8 b,8 b a' | gis4. a8 fis e dis fis | e2 r8 b8 e fis \bar "||"
 
    gis4 gis8 gis gis fis e fis | gis4 e4 r8 e8 a gis | cis,4 cis8 e dis dis gis fis | b,2 r8 b8 e fis |
-   gis4 gis8 gis gis fis e fis | gis( b) e,4 r8 e a gis | cis,4 cis8 e dis dis gis fis | e1 \bar "||"
+   gis4 gis8 gis gis fis e fis | gis( b) e,4 r8 e a gis | cis,4 cis8 e dis dis gis fis | e1 \bar "|."
 }
 
 \score {
