@@ -57,5 +57,4 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Slides vs Eslaides
 - Tìtulo da música clicável
 - Explícitar que é um download.
-- Tamanho da fonte do autor
 - Consertar índice com prefixo "A" etc. + acentos
