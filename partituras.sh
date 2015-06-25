@@ -1,5 +1,6 @@
 #!/bin/bash
-printf "Gerando 'Partituras.pdf'...\n"
+
+printf "Gerando 'Partituras/Partituras.pdf'...\n"
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 cd LilyPond
@@ -9,7 +10,6 @@ for ly in $(ls *.ly); do
   printf "pronto.\n"
 done
 cd ../
-# pdfunite Capa/Capa.pdf LilyPond/*.pdf Partituras.pdf
 printf "pronto.\n"
 
 if [ "$1" = "--with-ogg" ] || [ "$1" = "-o" ]; then
@@ -30,6 +30,7 @@ rm Partituras/midi/*
 mv LilyPond/*.midi Partituras/midi/
 rm Partituras/pdf/*
 mv LilyPond/*.pdf Partituras/pdf/
+pdfunite Capa/Capa.pdf Partituras/pdf/*.pdf Partituras/Partituras.pdf
 
 IFS=$SAVEIFS
 

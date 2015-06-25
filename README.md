@@ -53,10 +53,8 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 
 ## TODO
 - fazer índice de partituras
-- repeat volta in midi
 - Add favicon
 - Slides vs Eslaides
 - Tìtulo da música clicável
 - Explícitar que é um download.
 - Tamanho da fonte do autor
-- Consertar barras de separação

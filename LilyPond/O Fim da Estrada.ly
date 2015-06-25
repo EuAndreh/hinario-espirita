@@ -1,5 +1,5 @@
 \version "2.16.0"
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "O Fim da Estrada"
@@ -13,7 +13,7 @@
 melodia = \relative c'' {
   \key g \major
   \time 4/4
-  \tempo 4 = 140
+  \tempo 4 = 440
   \clef treble
 
   % Primeira estrofe
@@ -109,12 +109,18 @@ harmonia = \chordmode {
   \repeat percent 2 {a:m7} \repeat percent 2 {b:m7} \repeat percent 2 {c:6} \repeat percent 2 {d:7.9}
 
   % Refrão 2
-  g:6 e:m7 c:6 d:7.9
-  g:6 e:m7 c:6 d:7.9 g:6 e:m7 c:6 d:7.9 g:6
+  g4:6
+  \repeat volta 2 {
+    s2. e1:m7 c:6 d:7.9
+    g:6 e:m7 c:6 d:7.9 g4:6
+  }
+  \repeat volta 2 {
+    s2.
+    e1:m7 c:6 d:7.9 g4:6
+  }
 }
 
-\score {
-  <<
+musica =  <<
     \new ChordNames { \harmonia }
     \new Staff <<
       \new Voice = "melodia" { \melodia }
@@ -122,6 +128,13 @@ harmonia = \chordmode {
       \set Staff.midiInstrument = #"acoustic grand"
     >>
   >>
+\score {
+  \musica
   \layout {}
+}
+
+\score {
+  \unfoldRepeats
+  \musica
   \midi {}
 }
