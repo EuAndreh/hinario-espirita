@@ -59,6 +59,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Tìtulo da música clicável
 - Explícitar que é um download.
 - Consertar índice com prefixo "A" etc. + acentos
-- Midi no Frescobaldi
 - Shrink Sass
 - Download fonts
+- Checar vírgulas no título
+- s/sol/Sol/ s/lua/Lua/
