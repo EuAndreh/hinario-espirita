@@ -1,6 +1,6 @@
 !!! 5
 %html
- = Haml::Engine.new(File.read('../head.haml')).render
+ = Haml::Engine.new(File.read('head.haml')).render
  %h2
   Faça o download das partituras, com seus respectivos áudios:
 
@@ -15,5 +15,4 @@
      ogg
     %a{href: "data/#{fname}.midi"}
      midi
-
- = Haml::Engine.new(File.read('../footer.haml')).render
+ = Haml::Engine.new(File.read('footer.haml')).render
