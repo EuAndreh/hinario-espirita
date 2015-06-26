@@ -2,8 +2,8 @@
 
 printf "Gerando 'musicas.sbd'... "
 rm musicas.sbd
-for f in $(ls musicasTex); do
-  echo "\\include{musicasTex/$f}" | sed -e 's/.tex//' >> "musicas.sbd"
+for f in $(ls musicasTex/*.tex); do
+  echo "\\include{$f}" | sed -e 's/.tex//' >> "musicas.sbd"
 done
 printf "pronto.\n"
 

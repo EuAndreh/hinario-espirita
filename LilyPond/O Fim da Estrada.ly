@@ -1,5 +1,5 @@
 \version "2.16.0"
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "O Fim da Estrada"
@@ -13,7 +13,7 @@
 melodia = \relative c'' {
   \key g \major
   \time 4/4
-  \tempo 4 = 440
+  \tempo 4 = 140
   \clef treble
 
   % Primeira estrofe

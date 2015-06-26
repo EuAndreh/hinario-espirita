@@ -22,15 +22,9 @@ if [ "$1" = "--with-ogg" ] || [ "$1" = "-o" ]; then
   done
   cd ../
   printf "pronto.\n"
-  rm Partituras/audio/*
-  mv LilyPond/*.ogg Partituras/audio/
 fi
 
-rm Partituras/midi/*
-mv LilyPond/*.midi Partituras/midi/
-rm Partituras/pdf/*
-mv LilyPond/*.pdf Partituras/pdf/
-pdfunite Capa/Capa.pdf Partituras/pdf/*.pdf Partituras/Partituras.pdf
+pdfunite Capa/Capa.pdf LilyPond/*.pdf Partituras.pdf
 
 IFS=$SAVEIFS
 
