@@ -1,28 +1,37 @@
 @import url(http://fonts.googleapis.com/css?family=Cinzel)
 @import url(http://fonts.googleapis.com/css?family=Quicksand)
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic)
+@import url(http://fonts.googleapis.com/css?family=Lora)
 
 $buttonBlue: #428BCA
+$lora: 'Lora', Helvetica Neue, Helvetica, Arial, sans-serif
+$cinzel: 'Cinzel', Helvetica Neue, Helvetica, Arial, sans-serif
+$quicksand: 'Quicksand', Helvetica Neue, Helvetica, Arial, sans-serif
+$red: #CF4647
 
 h2
-  font-family: 'Lora', Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: $lora
   font-size: 20px
   font-weight: 200
   text-align: center
 
 h1
-  font-family: 'Cinzel', Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: $cinzel
   font-size: 72px
   font-weight: 200
   text-align: center
   a
     color: black
-    text-decoration: none
 
 a
+  font-family: $quicksand
   color: $buttonBlue
   text-decoration: none
 
+a:link
+  text-decoration: none
+
+a:hover
+  color: $red
 
 .nav
   list-style: none
@@ -34,7 +43,6 @@ a
     display: inline
 
   a
-    font-family: 'Quicksand', Helvetica Neue, Helvetica, Arial, sans-serif
     font-size: 18px
     font-weight: bold
     display: inline-block
@@ -50,14 +58,11 @@ a
     transition: all 0.3s ease 0s
 
   a:hover
-    background: #CF4647
-
-  a:link
-    text-decoration: none
+    background: $red
 
 p
   text-align: center
-  font-family: 'Lora', Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: $lora
   margin-left: auto
   margin-right: auto
   max-width: 500px
@@ -87,7 +92,7 @@ p.music-data
 .cartaz-frame
   margin-top: 50px
   p
-    font-family: 'Quicksand', Helvetica Neue, Helvetica, Arial, sans-serif
+    font-family: $quicksand
     font-size: 24px
     font-weight: bold
     color: $buttonBlue

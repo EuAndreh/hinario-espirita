@@ -1,46 +1,19 @@
 !!! 5
 %html
-  %head
-    %link{rel: "stylesheet", href: "../style.css"}
-    %meta{charset: "utf-8"}
-    %title Hinário Espírita
-  %body
-    %h1
-      %a{href: "http://hinarioespirita.com.br", title: "Início"}
-        Hinário espírita
+ = Haml::Engine.new(File.read('../head.haml')).render
+ %h2
+  Faça o download das partituras, com seus respectivos áudios:
 
-    %h2
-      Faça o download das partituras, com seus respectivos áudios:
+ - Dir.glob("partituras/data/*.pdf").sort.each do |pdf|
+  %p.music-data
+   - fname = File.basename(pdf,File.extname(pdf))
+   #{fname}
+   %br
+    %a{href: "data/#{fname}.pdf", target: "_blank"}
+     pdf
+    %a{href: "data/#{fname}.ogg", target: "_blank"}
+     ogg
+    %a{href: "data/#{fname}.midi"}
+     midi
 
-    - Dir.glob("partituras/data/*.pdf").sort.each do |pdf|
-      %p.music-data
-        - fname = File.basename(pdf,File.extname(pdf))
-        #{fname}
-        %br
-        %a{href: "data/#{fname}.pdf", target: "_blank"}
-          pdf
-        %a{href: "data/#{fname}.ogg", target: "_blank"}
-          ogg
-        %a{href: "data/#{fname}.midi"}
-          midi
-
-    %a{href: "http://fraternidadecasadocaminho.org.br/", title: "Fraternidade Casa do Caminho"}
-      %img.logo{src: "../logo.png"}
-
-    :coffee
-      ((i, s, o, g, r, a, m) ->
-        i['GoogleAnalyticsObject'] = r
-        i[r] = i[r] or ->
-          (i[r].q = i[r].q or []).push arguments
-          return
-
-        i[r].l = 1 * new Date
-        a = s.createElement(o)
-        m = s.getElementsByTagName(o)[0]
-        a.async = 1
-        a.src = g
-        m.parentNode.insertBefore a, m
-        return
-      ) window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'
-      ga 'create', 'UA-29444107-3', 'auto'
-      ga 'send', 'pageview'
+ = Haml::Engine.new(File.read('../footer.haml')).render

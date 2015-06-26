@@ -1,75 +1,45 @@
 !!! 5
 %html
-  %head
-    %link{rel: "stylesheet", href: "style.css"}
-    %meta{charset: "utf-8"}
-    %title Hinário Espírita
-  %body
-    %h1
-      %a{href: "http://hinarioespirita.com.br", title: "Início"}
-        Hinário espírita
+ = Haml::Engine.new(File.read('head.haml')).render
+ %ul.nav
+  %li
+   %a{href: "Hinário.pdf", title: "Hinário.pdf", target: "_blank"}
+    Hinário
+  %li
+   %a{href: "Cifras.pdf", title: "Cifras.pdf", target: "_blank"}
+    Cifras
+  %li
+   %a{href: "Transparências.pdf", title: "Transparências.pdf", target: "_blank"}
+    Transparências
+  %li
+   %a{href: "Slides.pdf", title: "Slides.pdf", target: "_blank"}
+    %i
+     Slides
+  %li
+   %a{href: "partituras/", title: "Partituras"}
+    Partituras
 
-    %ul.nav
-      %li
-        %a{href: "Hinário.pdf", title: "Hinário.pdf", target: "_blank"}
-          Hinário
-      %li
-        %a{href: "Cifras.pdf", title: "Cifras.pdf", target: "_blank"}
-          Cifras
-      %li
-        %a{href: "Transparências.pdf", title: "Transparências.pdf", target: "_blank"}
-          Transparências
-      %li
-        %a{href: "Slides.pdf", title: "Slides.pdf", target: "_blank"}
-          %i
-            Slides
-      %li
-        %a{href: "partituras/", title: "Partituras"}
-          Partituras
+ %p
+  Última versão de
+  = surround "", "." do
+   = Time.now.strftime("%d/%m/%Y")
+  Atualizado periodicamente.
 
-    %p
-      Última versão de
-      = surround "", "." do
-        = Time.now.strftime("%d/%m/%Y")
-      Atualizado periodicamente.
+ %p
+  O "Hinário Espírita" é publicado sob a licença
+  %a{href: "https://creativecommons.org/licenses/by-sa/4.0/", title: "Creative Commons"} Creative Commons.
+  Sinta-se livre para modificá-lo e redistribuí-lo à vontade!
 
-    %p
-      O "Hinário Espírita" é publicado sob a licença
-      %a{href: "https://creativecommons.org/licenses/by-sa/4.0/", title: "Creative Commons"} Creative Commons.
-      Sinta-se livre para modificá-lo e redistribuí-lo à vontade!
+ .cartaz-frame
+  %p
+   Cartaz de divulgação:
+  %p
+   %a{href: "Cartaz.pdf", title: "Cartaz.pdf", target: "_blank"}
+    %img.cartaz{src: "Cartaz.png"}
 
-    .cartaz-frame
-      %p
-        Cartaz de divulgação:
-      %p
-        %a{href: "Cartaz.pdf", title: "Cartaz.pdf", target: "_blank"}
-          %img.cartaz{src: "Cartaz.png"}
-
-    %p
-      Para correções ou sugestões de músicas ou modificações, entre em contato:
-      %a{href: "mailto:andremiramor@gmail.com", target: "_top"} andremiramor@gmail.com
-      Ficarei feliz em ajudar.
-
-    %a{href: "https://github.com/EuAndreh/hinario-espirita"}
-      %img.fork{src: "https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", alt: "Fork me on GitHub"}
-
-    %a{href: "http://fraternidadecasadocaminho.org.br/", title: "Fraternidade Casa do Caminho"}
-      %img.logo{src: "logo.png"}
-
-    :coffee
-      ((i, s, o, g, r, a, m) ->
-        i['GoogleAnalyticsObject'] = r
-        i[r] = i[r] or ->
-          (i[r].q = i[r].q or []).push arguments
-          return
-
-        i[r].l = 1 * new Date
-        a = s.createElement(o)
-        m = s.getElementsByTagName(o)[0]
-        a.async = 1
-        a.src = g
-        m.parentNode.insertBefore a, m
-        return
-      ) window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'
-      ga 'create', 'UA-29444107-3', 'auto'
-      ga 'send', 'pageview'
+ %p
+  Para correções ou sugestões de músicas ou modificações, entre em contato:
+  = surround "", "." do
+   %a{href: "mailto:andremiramor@gmail.com", target: "_top"} andremiramor@gmail.com
+   Ficarei feliz em ajudar.
+ = Haml::Engine.new(File.read('footer.haml')).render
