@@ -3,8 +3,6 @@ Hinário de músicas espíritas
 
 Construído a partir dos programas LaTeX [songs](http://songs.sourceforge.net/), e [LilyPond](http://www.lilypond.org/).
 
-Repositório do site também [disponível](https://github.com/hinario-espirita/hinario-espirita.github.io).
-
 ## Executar
 Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond](http://www.lilypond.org/) e [TiMidity++](http://timidity.sourceforge.net/) estão corretamente instalados. Para a edição de partituras, eu recomendo o [Frescobaldi](http://frescobaldi.org/).
 ```shell
