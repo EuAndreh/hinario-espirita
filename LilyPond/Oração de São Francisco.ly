@@ -1,5 +1,5 @@
 \version "2.16.0"
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "Oração de São Francisco"
@@ -65,12 +65,11 @@ letra = \lyricmode {
 harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
   s4 a1:m c2 a:m e a1:m d2:m d:m/f a1:m d2:m d:m/f a1:m c a:m c2 e a1:m
-  d2:m d:m/f a1:m  d2:m d:m/f a1:m c a:m c2 e \repeat percent 4 {a2:m}
+  d2:m d:m/f a1:m  d2:m d:m/f a1:m c a:m c2 e \repeat percent 2 {a1:m}
   c a:m d1:m a2:m e a1:m d:m g:7 c2 e a1:m e a:m d:m g:7 c2 e a1:m e a:m
 }
 
 \score {
-  \unfoldRepeats
   <<
     \new ChordNames { \harmonia }
     \new Staff <<
