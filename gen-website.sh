@@ -4,7 +4,7 @@ printf "Copiando pdfs..."
 cp ../hinario-espirita/Hinário.pdf .
 cp ../hinario-espirita/Cifras.pdf .
 cp ../hinario-espirita/Transparências.pdf .
-cp ../hinario-espirita/Eslaides.pdf .
+cp ../hinario-espirita/Slides.pdf .
 cp ../hinario-espirita/Capa/Cartaz.pdf .
 printf "pronto.\n"
 
