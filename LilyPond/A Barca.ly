@@ -8,7 +8,12 @@
     \with-url #"http://hinarioespirita.com.br"
     \line { "hinarioespirita.com.br" }
   }
+  copyright = \markup {
+    \with-url #"https://creativecommons.org/licenses/by-sa/4.0/"
+    \line { "Creative Commons Attribution ShareAlike" }
+  }
 }
+
 global = {
   \key d \major
   \time 6/8

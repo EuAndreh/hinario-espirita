@@ -1,5 +1,5 @@
 \version "2.16.0"
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "Coragem"
@@ -7,6 +7,10 @@
   tagline =  \markup {
     \with-url #"http://hinarioespirita.com.br"
     \line { "hinarioespirita.com.br" }
+  }
+  copyright = \markup {
+    \with-url #"https://creativecommons.org/licenses/by-sa/4.0/"
+    \line { "Creative Commons Attribution ShareAlike" }
   }
 }
 
@@ -39,8 +43,7 @@ melodia = \relative c'' {
   b8 fis16 fis~ fis gis8 fis16~ fis4. r16 gis16 | gis16 gis8 gis16 gis e8 e16~ e4 r8 cis16 dis | 
   e16 e8 e16 e e8 e16 r8 a8 a b | gis8 e16 e~ e cis8 e16~ e2(
   dis1) | gis( | e2) r8 a8 a b | gis8 e16 e~ e cis8 e16~ e2
-  
-  
+  \bar "|."
 }
 
 letra = \lyricmode {
@@ -73,10 +76,7 @@ harmonia = \chordmode {
   e2 b cis1:m a
   e1 b cis:m a \repeat percent 2 {e}
   b cis:m a e
-  b cis:m a \repeat percent 2 {e}
-
-  
-  
+  b cis:m a e
 }
 
 \score {
