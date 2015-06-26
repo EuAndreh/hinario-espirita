@@ -19,7 +19,7 @@ melodia = \relative c'' {
   \partial 16 gis16 |
   gis8 a16 gis~ gis e8 e16~ e2
   fis8 fis16 fis~ fis e8 fis16~ fis4. r16 gis16 |
-  gis8 e16 e~ e cis8 e16~ e16 e8.~ e8 cis16 cis |
+  gis8 e16 e~ e cis8 e16~ e16 e8.~ e8 cis16 dis |
   e16 e8 e16~ e e8. r8 a16 a a8 b | gis1
   
   b8 b16 b~ b gis8 b16~ b4. b16 b |
