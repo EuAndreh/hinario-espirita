@@ -59,5 +59,4 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Shrink Sass
 - Download fonts
 - Checar vírgulas no título
-- s/sol/Sol/ s/lua/Lua/
 - \unfoldRepeats nos midis?

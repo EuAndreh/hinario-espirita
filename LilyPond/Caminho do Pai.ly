@@ -56,7 +56,7 @@ letra = \lyricmode {
   De on -- de vim, a -- on -- de vou, por on -- de_i -- rás, i -- rei tam -- bém.  
     
   Vem e_eu te di -- rei o que es -- tás a pro -- cu -- rar.  
-  A ver -- da -- de_é co -- mo_um sol, que_in -- va -- di -- rá teu co -- ra -- ção.  
+  A ver -- da -- de_é co -- mo_um Sol, que_in -- va -- di -- rá teu co -- ra -- ção.  
   Sim, eu i -- rei e_a -- pren -- de -- rei mi -- nha ra -- zão de ser.  
   Eu cre -- io_em Ti, que crês em mim, na Tu -- a luz ve -- rei a luz  
     
