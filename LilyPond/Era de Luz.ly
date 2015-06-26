@@ -1,5 +1,5 @@
 \version "2.16.2"
-%\pointAndClickOff
+\pointAndClickOff
 
 \header {
   title = "Era de Luz"
