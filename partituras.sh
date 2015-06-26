@@ -24,8 +24,6 @@ if [ "$1" = "--with-ogg" ] || [ "$1" = "-o" ]; then
   printf "pronto.\n"
 fi
 
-pdfunite Capa/Capa.pdf LilyPond/*.pdf Partituras.pdf
-
 IFS=$SAVEIFS
 
 echo "'Partituras.pdf' com $(ls -l LilyPond/*.ly | wc -l) músicas."

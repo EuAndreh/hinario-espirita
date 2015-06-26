@@ -6,7 +6,7 @@ Construído a partir dos programas LaTeX [songs](http://songs.sourceforge.net/),
 Repositório do site também [disponível](https://github.com/hinario-espirita/hinario-espirita.github.io).
 
 ## Executar
-Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond](http://www.lilypond.org/) e [TiMidity++](http://timidity.sourceforge.net/) estão corretamente instalados.
+Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond](http://www.lilypond.org/) e [TiMidity++](http://timidity.sourceforge.net/) estão corretamente instalados. Para a edição de partituras, eu recomendo o [Frescobaldi](http://frescobaldi.org/).
 ```shell
 $ git clone https://github.com/EuAndreh/hinario-espirita.git
 $ cd hinario-espirita
