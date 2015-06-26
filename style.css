@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+h2 {
+  font-family: "Lora", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center; }
+
+h1 {
+  font-family: "Cinzel", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 200;
+  text-align: center; }
+  h1 a {
+    color: black;
+    text-decoration: none; }
+
+a {
+  color: #428BCA;
+  text-decoration: none; }
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  .nav li {
+    display: inline; }
+  .nav a {
+    font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    background: #428BCA;
+    color: #fff;
+    height: 60px;
+    width: 150px;
+    line-height: 60px;
+    margin: 25px 25px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s; }
+  .nav a:hover {
+    background: #CF4647; }
+  .nav a:link {
+    text-decoration: none; }
+
+p {
+  text-align: center;
+  font-family: "Lora", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px; }
+
+p.music-data {
+  text-align: left; }
+
+.logo {
+  bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 20%;
+  margin-top: 50px; }
+
+.fork {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0; }
+
+.cartaz {
+  width: 40%;
+  heigth: auto; }
+
+.cartaz-frame {
+  margin-top: 50px; }
+  .cartaz-frame p {
+    font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #428BCA; }
+
+/*# sourceMappingURL=style.css.map */
