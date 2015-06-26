@@ -53,7 +53,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 
 ## TODO
 - Add favicon
-- Slides vs Eslaides
 - Tìtulo da música clicável
 - Explícitar que é um download.
 - Consertar índice com prefixo "A" etc. + acentos

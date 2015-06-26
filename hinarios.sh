@@ -18,7 +18,7 @@ gen_latex() {
 gen_latex "Hinário"
 gen_latex "Cifras"
 gen_latex "Transparências"
-gen_latex "Eslaides"
+gen_latex "Slides"
 
 printf "Removendo arquivos sujeira... "
 rm *.aux *.out *.log *.sxd *.sbx *.sxc musicasTex/*.aux
