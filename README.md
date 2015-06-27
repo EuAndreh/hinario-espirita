@@ -55,4 +55,4 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Add favicon
 - Tìtulo da música clicável
 - Consertar índice com prefixo "A" etc. + acentos
-- \unfoldRepeats nos midis?
+- Mobile responsive website
