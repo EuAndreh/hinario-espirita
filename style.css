@@ -16,7 +16,6 @@ h1 {
     color: black; }
 
 a {
-  font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #428BCA;
   text-decoration: none; }
 
@@ -34,6 +33,7 @@ a:hover {
   .nav li {
     display: inline; }
   .nav a {
+    font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
     display: inline-block;
