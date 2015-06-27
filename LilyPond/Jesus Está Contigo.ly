@@ -33,9 +33,9 @@ introToSegno = \relative c' {
 
 segnoToCoda = \relative c' {
   r4 cis'4 b8.fis16~ fis8 a | gis4.( fis8 gis2) |
-  a16 a8 a16~ a a8 b16~ b b8 b16~ b a8 gis16~ | gis2 r2 |
-  r4 cis8 cis b8.fis16~ fis8 a | gis4.( fis8 e4.) r16 e16 |
-  a16 a8 a16~ a a8 b16~ b b8 gis16~ gis fis8 fis16~(  |
+  a16 a8 a16~ a a8 b16~ b8 b b a | gis2 r2 |
+  r4 cis8 cis b8.fis16~ fis8 a | gis4.( fis8 e4.) r16 cis16 |
+  fis16 fis8 fis16~ fis gis8 a16~ a a8 gis16~ gis fis8 fis16~(  |
 }
 
 segundaEstrofe = \relative c' {
