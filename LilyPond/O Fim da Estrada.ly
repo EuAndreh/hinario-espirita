@@ -4,6 +4,7 @@
 \header {
   title = "O Fim da Estrada"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
+  composer = "Alexandre Paredes"
   tagline =  \markup {
     \with-url #"http://hinarioespirita.com.br"
     \line { "hinarioespirita.com.br" }
