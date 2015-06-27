@@ -54,9 +54,5 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 ## TODO
 - Add favicon
 - Tìtulo da música clicável
-- Explícitar que é um download.
 - Consertar índice com prefixo "A" etc. + acentos
-- Shrink Sass
-- Download fonts
-- Checar vírgulas no título
 - \unfoldRepeats nos midis?
