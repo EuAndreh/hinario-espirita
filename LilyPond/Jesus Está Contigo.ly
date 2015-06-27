@@ -51,7 +51,7 @@ segundaEstrofe = \relative c' {
 codaToEnd = \relative c' {
   fis16 e~ e4.) r4.. b16 |
   gis'8 b gis fis gis2 |
-  fis2. r8. b,16 | a' a8 a16~ a b8  gis16~ gis8 fis e fis | 
+  fis2. r8. b,16 | a' a8 a16~ a b8  gis16~ gis8 fis e fis16 gis~ | 
   gis1 | a16 a8 a16 a8 b16 gis16~ gis8 fis e fis16 fis( 
   e1)~ e
 }
