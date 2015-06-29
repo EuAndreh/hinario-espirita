@@ -9,10 +9,10 @@ cp ../hinario-espirita/Capa/Cartaz.pdf .
 printf "pronto.\n"
 
 printf "Copiando áudios..."
-cp ../hinario-espirita/LilyPond/*.pdf partituras/data/
-cp ../hinario-espirita/LilyPond/*.ogg partituras/data/
-cp ../hinario-espirita/LilyPond/*.midi partituras/data/
-cp ../hinario-espirita/LilyPond/*.mp3 partituras/data/
+cp ../hinario-espirita/LilyPond/*.pdf partituras/
+cp ../hinario-espirita/LilyPond/*.ogg partituras/
+cp ../hinario-espirita/LilyPond/*.midi partituras/
+cp ../hinario-espirita/LilyPond/*.mp3 partituras/
 printf "pronto.\n"
 
 printf "Compilando Sass... "

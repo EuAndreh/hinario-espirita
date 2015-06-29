@@ -12,21 +12,21 @@
   %h2
    Faça o download das partituras, com seus respectivos áudios:
 
-  - Dir.glob("partituras/data/*.pdf").sort.each do |pdf|
+  - Dir.glob("partituras/*.pdf").sort.each do |pdf|
    %p.music-data
     - fname = File.basename(pdf,File.extname(pdf))
     #{fname}
     %br
-     %a{href: "data/#{fname}.pdf", target: "_blank"}
+     %a{href: "#{fname}.pdf", target: "_blank"}
       pdf
      |
-     %a{href: "data/#{fname}.ogg", target: "_blank"}
+     %a{href: "#{fname}.ogg", target: "_blank"}
       ogg
      |
-     %a{href: "data/#{fname}.midi"}
+     %a{href: "#{fname}.midi"}
       midi
      |
-     %a{href: "data/#{fname}.mp3"}
+     %a{href: "#{fname}.mp3"}
       mp3
 
   %a{href: "http://fraternidadecasadocaminho.org.br/", title: "Fraternidade Casa do Caminho"}
