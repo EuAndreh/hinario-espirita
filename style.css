@@ -82,11 +82,21 @@ p.music-data {
   heigth: auto; }
 
 .cartaz-frame {
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-width: 10px;
+  border-color: #428BCA;
+  border-style: solid;
+  background: #428BCA;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px; }
   .cartaz-frame p {
     font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: white;
     font-size: 24px;
-    font-weight: bold;
-    color: #428BCA; }
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
