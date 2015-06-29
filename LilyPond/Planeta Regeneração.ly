@@ -3,6 +3,7 @@
 
 \header {
   title = "Planeta Regeneração"
+  composer = "Edet e Maria Helena"
   subsubtitle = #(strftime "%d-%m-%Y" (localtime (current-time)))
   tagline =  \markup {
     \with-url #"http://hinarioespirita.com.br"
