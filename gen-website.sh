@@ -8,10 +8,11 @@ cp ../hinario-espirita/Slides.pdf .
 cp ../hinario-espirita/Capa/Cartaz.pdf .
 printf "pronto.\n"
 
-printf "Copiando midis e oggs..."
+printf "Copiando áudios..."
 cp ../hinario-espirita/LilyPond/*.pdf partituras/data/
 cp ../hinario-espirita/LilyPond/*.ogg partituras/data/
 cp ../hinario-espirita/LilyPond/*.midi partituras/data/
+cp ../hinario-espirita/LilyPond/*.mp3 partituras/data/
 printf "pronto.\n"
 
 printf "Compilando Sass... "
