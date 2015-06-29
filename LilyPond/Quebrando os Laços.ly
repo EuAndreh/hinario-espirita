@@ -18,7 +18,7 @@
 melodia = \relative c' {
   \key c \major
   \time 4/4
-  \tempo 4 = 210
+  \tempo 4 = 110
   \clef treble
   
   r4. e8 e4 f8 e~ | e e d c~ c g~ g4 | r4. e'8 e4 f8 e8~ | e e d c~ c2 |
