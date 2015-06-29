@@ -56,3 +56,76 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Tìtulo da música clicável
 - Consertar índice com prefixo "A" etc. + acentos
 - Mobile responsive website
+
+### Partituras faltando
+- A Melhor Idade
+- Alô, Bom Dia
+- Amar como Jesus Amou
+- Armadura
+- Arte
+- Astro Rei
+
+- Bem Viver
+- Boa Nova
+- Brilhe a Vossa Luz
+- Brilhem Mais
+- Buscai Primeiro
+
+- Caminhar Servindo
+- Cantando a Paz
+- Cante e Ame
+- Celebrai
+- Conhecer a Verdade
+- Consciência Pura
+- Convite ao Vôo
+
+- Dê um Sorriso
+- Dias de Paz
+
+- É Preciso
+- Ei, Você
+- Ele
+- Encontro de Luz
+- Esta Paz
+- Eu e Você
+- Eu Posso
+
+- Fraternidade
+- Fronteiras
+
+- Hino a Emmanuel
+- Hino ao Espiritismo
+
+- Já é Tempo
+- Jesus Gosta de Você
+
+- Lírios
+- Livro espírita II
+
+- Mensagem Fraterna
+
+- Na Sua Casa
+- Novo Dia
+
+- Obrigado, Senhor
+
+- Paz Pela Paz
+- Pra Melhorar
+
+- Que Bela Manhã
+
+- Raiz
+- Refrão da Alegria
+
+- Segredo
+- Seguir com Paulo
+- Seguro em Deus
+- Ser Gota
+- Somos Nós
+
+- Trocando de Routa
+
+- Um Novo Caminho
+
+- Viver é Tão Bom
+- Você com Cristo
