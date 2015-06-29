@@ -23,7 +23,7 @@ a:link {
   text-decoration: none; }
 
 a:hover {
-  color: #CF4647; }
+  color: #ea8364; }
 
 .nav {
   list-style: none;
@@ -50,7 +50,7 @@ a:hover {
   .nav a.partituras {
     width: auto; }
   .nav a:hover {
-    background: #CF4647; }
+    background: #ea8364; }
 
 p {
   text-align: center;
