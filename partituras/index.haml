@@ -17,8 +17,9 @@
     - fname = File.basename(pdf,File.extname(pdf))
     #{fname}
     %br
-    %audio{controls: true}
+    %audio{controls: true, preload: "none"}
      %source{src: "#{fname}.ogg", type: "audio/ogg"}
+     %source{src: "#{fname}.mp3", type: "audio/mpeg"}
     %br
      %a{href: "#{fname}.pdf", target: "_blank"}
       pdf
