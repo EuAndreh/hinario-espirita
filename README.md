@@ -68,7 +68,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Bem Viver
 - Boa Nova
 - Brilhe a Vossa Luz
-- Brilhem Mais
 - Buscai Primeiro
 
 - Caminhar Servindo
