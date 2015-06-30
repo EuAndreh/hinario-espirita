@@ -128,5 +128,3 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Um Novo Caminho
 
 - Viver é Tão Bom
-- Você com Cristo
-
