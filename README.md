@@ -79,7 +79,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 
 - Dias de Paz
 
-- É Preciso
 - Ei, Você
 - Ele
 - Encontro de Luz
