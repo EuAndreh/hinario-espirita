@@ -68,7 +68,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Bem Viver
 - Boa Nova
 - Brilhe a Vossa Luz
-- Buscai Primeiro
 
 - Caminhar Servindo
 - Cantando a Paz
@@ -78,7 +77,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Consciência Pura
 - Convite ao Vôo
 
-- Dê um Sorriso
 - Dias de Paz
 
 - É Preciso
