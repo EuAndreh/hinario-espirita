@@ -58,6 +58,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Consertar índice com prefixo "A" etc. + acentos
 - Mobile responsive website
 - Aumentar o tamanhod da donte dos itens do índice
+- Consertar tamanho lateral da capa
 
 ### Partituras faltando
 - A Melhor Idade
