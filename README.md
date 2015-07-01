@@ -4,7 +4,7 @@ Hinário de músicas espíritas
 Construído a partir dos programas LaTeX [songs](http://songs.sourceforge.net/), e [LilyPond](http://www.lilypond.org/).
 
 ## Executar
-Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond](http://www.lilypond.org/) e [TiMidity++](http://timidity.sourceforge.net/) estão corretamente instalados. Para a edição de partituras, eu recomendo o [Frescobaldi](http://frescobaldi.org/).
+Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond](http://www.lilypond.org/), [TiMidity++](http://timidity.sourceforge.net/) e [lame](http://lame.sourceforge.net/) estão corretamente instalados. Para a edição de partituras, eu recomendo o [Frescobaldi](http://frescobaldi.org/).
 ```shell
 $ git clone https://github.com/EuAndreh/hinario-espirita.git
 $ cd hinario-espirita
@@ -59,6 +59,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Mobile responsive website
 - Aumentar o tamanhod da donte dos itens do índice
 - Consertar tamanho lateral da capa
+- Author index?
 
 ### Partituras faltando
 - A Melhor Idade

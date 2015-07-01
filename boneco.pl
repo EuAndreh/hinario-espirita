@@ -26,7 +26,11 @@ while ($l_center > 0) {
   $r_center++;
 
   if ($r_center > $n_pags) {
-    `cp Capa/Vazia.pdf tmp_$pg_counter.pdf`;
+    if ($r_center == 4*ceil($n_pags/4) and $r_center != $n_pags) {
+      `cp Capa/Fundo.pdf tmp_$pg_counter.pdf`;
+    } else {
+      `cp Capa/Vazia.pdf tmp_$pg_counter.pdf`;
+    }
   } else {
     print `pdfseparate -f $r_center -l $r_center "$ARGV[0]" tmp_$pg_counter.pdf`;
   }
@@ -37,6 +41,7 @@ while ($l_center > 0) {
   $l_center--;
   $r_center++;
 }
+
 
 `pdfunite tmp* out.pdf`;
 my $pdf_list =  `ls -v tmp*`;
