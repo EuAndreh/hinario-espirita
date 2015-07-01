@@ -8,7 +8,7 @@ done
 printf "pronto.\n"
 
 gen_song() {
-  printf "Gerando '%b'.pdf... " $1
+  printf "Gerando '%b'.pdf... " "$1"
   pdflatex "$1.tex" > /dev/null
   songidx "Indice$(echo $1 | sed 'y/áê/ae/').sxd" 2> /dev/null
   pdflatex "$1.tex" > /dev/null
@@ -20,7 +20,7 @@ gen_latex() {
 }
 
 gen_boneco() {
-  gen_song $1
+  gen_song "$1"
   ./boneco.pl "$1.pdf"
   printf "pronto.\n"
 }
