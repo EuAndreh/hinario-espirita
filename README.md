@@ -100,7 +100,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 
 - Mensagem Fraterna
 
-- Na Sua Casa
 - Novo Dia
 
 - Obrigado, Senhor
@@ -119,7 +118,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Ser Gota
 - Somos Nós
 
-- Trocando de Routa
+- Trocando de Roupa
 
 - Um Novo Caminho
 
