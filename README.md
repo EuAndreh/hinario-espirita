@@ -72,7 +72,6 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Caminhar Servindo
 - Cantando a Paz
 - Cante e Ame
-- Celebrai
 - Conhecer a Verdade
 - Consciência Pura
 - Convite ao Vôo
@@ -96,7 +95,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Jesus Gosta de Você
 
 - Lírios
-- Livro espírita II
+- Livro Espírita II
 
 - Mensagem Fraterna
 
