@@ -7,11 +7,21 @@ for f in $(ls musicasTex/*.tex); do
 done
 printf "pronto.\n"
 
-gen_latex() {
+gen_song() {
   printf "Gerando '%b'.pdf... " $1
   pdflatex "$1.tex" > /dev/null
   songidx "Indice$(echo $1 | sed 'y/áê/ae/').sxd" 2> /dev/null
   pdflatex "$1.tex" > /dev/null
+}
+
+gen_latex() {
+  gen_song $1
+  printf "pronto.\n"
+}
+
+gen_boneco() {
+  gen_song $1
+  ./boneco.pl "$1.pdf"
   printf "pronto.\n"
 }
 
@@ -19,6 +29,9 @@ gen_latex "Hinário"
 gen_latex "Cifras"
 gen_latex "Transparências"
 gen_latex "Slides"
+
+gen_boneco "HinárioBoneco"
+gen_boneco "CifrasBoneco"
 
 printf "Removendo arquivos sujeira... "
 rm *.aux *.out *.log *.sxd *.sbx *.sxc musicasTex/*.aux

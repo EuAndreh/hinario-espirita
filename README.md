@@ -8,7 +8,8 @@ Certifique-se que os programas [songs](http://songs.sourceforge.net/), [LilyPond
 ```shell
 $ git clone https://github.com/EuAndreh/hinario-espirita.git
 $ cd hinario-espirita
-$ chmod +x hinario.sh 
+$ chmod +x hinario.sh
+$ chmod +x boneco.pl
 $ ./hinarios.sh
 
 # Para produzir partituras
