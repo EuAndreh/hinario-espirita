@@ -6,6 +6,8 @@ cp ../hinario-espirita/Cifras.pdf .
 cp ../hinario-espirita/Transparências.pdf .
 cp ../hinario-espirita/Slides.pdf .
 cp ../hinario-espirita/Capa/Cartaz.pdf .
+cp ../hinario-espirita/CifrasBoneco.pdf Cifras\(boneco\).pdf
+cp ../hinario-espirita/HinárioBoneco.pdf Hinário\(boneco\).pdf
 printf "pronto.\n"
 
 printf "Copiando áudios..."
