@@ -25,9 +25,18 @@
 \titleprefixword{}
 
 \renewcommand{\lyricfont}{\LARGE}
-%\renewcommand{\idxtitlefont}{\large}
+\renewcommand{\idxtitlefont}{\large}
+\renewcommand{\idxrefsfont}{\large}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\Large\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
 
 \begin{document}
+\pagestyle{plain}
 \includepdf[pages={1}]{Capa/Capa.pdf}
 \showindex{Índice de Músicas \\ \large{\today}}{titleidx}
 \begin{songs}{titleidx}
