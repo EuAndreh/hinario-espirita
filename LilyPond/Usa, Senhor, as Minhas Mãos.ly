@@ -17,7 +17,7 @@
 melodia = \relative c' {
   \key e \major
   \time 6/8
-  \tempo 8 = 140
+  \tempo 8 = 180
   \clef treble
 
   % 1
