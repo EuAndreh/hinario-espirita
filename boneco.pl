@@ -42,7 +42,6 @@ while ($l_center > 0) {
   $r_center++;
 }
 
-
 `pdfunite tmp* out.pdf`;
 my $pdf_list =  `ls -v tmp*`;
 `pdfunite \$(ls -v tmp*) out.pdf`;
