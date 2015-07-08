@@ -1,5 +1,5 @@
 \version "2.16.0"
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "$titulo"
@@ -25,7 +25,7 @@ melodia = \relative c' {
 }
 
 letra = \lyricmode {
-  $letra
+$letra
 }
 
 harmonia = \chordmode {

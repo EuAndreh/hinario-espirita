@@ -44,7 +44,7 @@ Detalhes:
 
 Se for escrever a partitura de uma música que já existe:
 ```shell
-$ ./extrair-letra.sh musicasTex/nome-da-musica.tex
+$ ./extrair-letra.pl musicasTex/nome-da-musica.tex
 ```
 
 Assim, o arquivo LilyPond da música é criado e a letra já é inserida no local apropriado.
