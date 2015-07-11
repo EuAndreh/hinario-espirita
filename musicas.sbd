@@ -39,6 +39,7 @@
 \include{musicasTex/esta-paz}
 \include{musicasTex/eu-e-voce}
 \include{musicasTex/eu-posso}
+\include{musicasTex/fio-partido}
 \include{musicasTex/fraternidade}
 \include{musicasTex/fronteiras}
 \include{musicasTex/hino-a-emmanuel}
@@ -65,7 +66,6 @@
 \include{musicasTex/pra-melhorar}
 \include{musicasTex/quanta-paz}
 \include{musicasTex/que-bela-manha}
-\include{musicasTex/quebrando-os-lacos}
 \include{musicasTex/raiz}
 \include{musicasTex/refrao-da-alegria}
 \include{musicasTex/segredo}
