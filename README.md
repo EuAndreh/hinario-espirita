@@ -60,6 +60,7 @@ Assim, o arquivo LilyPond da música é criado e a letra já é inserida no loca
 - Aumentar o tamanhod da donte dos itens do índice
 - Consertar tamanho lateral da capa
 - Author index?
+- tamanho da fonte: número da página e texto do índice
 
 ### Partituras faltando
 - A Melhor Idade
