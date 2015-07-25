@@ -1,0 +1,55 @@
+\documentclass[a4]{article}
+\usepackage[portuguese]{babel}
+\usepackage{pdfpages}
+\usepackage[bookmarks]{hyperref}
+\usepackage[chorded]{songs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{etoolbox}
+\patchcmd{\showauthors}{\bfseries}{\itshape\normalsize}{}{}
+
+\setlength{\oddsidemargin}{-0.4in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{7.7in}
+\setlength{\topmargin}{0in}
+\setlength{\topskip}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.1in}
+\settowidth{\versenumwidth}{1.\ }
+
+\newindex{titleidx}{IndiceCifrasBoneco}
+\indexsongsas{titleidx}{\thepage}
+\titleprefixword{}
+
+\renewcommand{\lyricfont}{\LARGE}
+\renewcommand{\idxtitlefont}{\large}
+\renewcommand{\idxrefsfont}{\large}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\Large\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+
+\renewcommand{\showauthors}{\Large\it\songauthors}
+\renewcommand{\stitlefont}{\Huge\sffamily\slshape}
+
+\renewcommand{\idxrefsfont}{\\\LARGE}
+\renewcommand{\idxtitlefont}{\sffamily\slshape\LARGE\relax\ignorespaces\unskip}
+
+\renewcommand{\printchord}[1]{\sffamily\slshape\LARGE#1}
+
+
+\begin{document}
+\pagestyle{plain}
+\includepdf[pages={1}]{Capa.pdf}
+\showindex{Índice de Músicas \\ \large{\today}}{titleidx}
+\begin{songs}{titleidx}
+\input{musicas.sbd}
+\end{songs}
+
+\end{document}

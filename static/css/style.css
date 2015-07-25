@@ -1,0 +1,187 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+h3 {
+  font-family: "Lora", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center; }
+
+h2 {
+  font-family: "Lora", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center; }
+
+h1 {
+  font-family: "Cinzel", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 200;
+  text-align: center; }
+  h1 a {
+    color: black; }
+
+a {
+  color: #428BCA;
+  text-decoration: none;
+  transition: all 0.3s ease 0s; }
+
+a:link {
+  text-decoration: none; }
+
+a:hover {
+  color: #cf4647; }
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  .nav li {
+    display: inline; }
+  .nav a {
+    font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    background: #428BCA;
+    color: #fff;
+    height: 60px;
+    width: 165px;
+    line-height: 60px;
+    margin: 25px 25px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s; }
+  .nav a.partituras {
+    width: auto; }
+  .nav a:hover {
+    background: #cf4647; }
+  .nav a.boneco {
+    width: auto; }
+
+p {
+  text-align: center;
+  font-family: "Lora", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px; }
+
+p.music-data {
+  text-align: left; }
+
+.logo {
+  bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 20%;
+  margin-top: 50px; }
+
+.fork {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0; }
+
+.cartaz {
+  width: 40%;
+  heigth: auto; }
+
+.cartaz-frame {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-width: 10px;
+  border-color: #428BCA;
+  border-style: solid;
+  background: #428BCA;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px; }
+  .cartaz-frame p {
+    font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bold; }
+
+.checkbox-columns {
+  column-count: 3; }
+
+.botao-gerar, .criar {
+  padding: 10px;
+  background: #428BCA;
+  border: 0;
+  width: 165px;
+  height: 80px;
+  font-family: "Quicksand", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 45px;
+  transition: all 0.3s ease 0s;
+  color: white; }
+
+.criar {
+  color: white; }
+
+.criar:hover {
+  background: #cf4647;
+  color: white; }
+
+.botao-gerar:hover {
+  background: #cf4647; }
+
+.center-button {
+  text-align: center; }
+
+ul.columns {
+  margin-left: 18%;
+  margin-right: 18%;
+  height: 40%;
+  -moz-columns: 12em;
+  -webkit-columns: 12em;
+  columns: 12em;
+  -webkit-column-fill: auto;
+  -moz-column-fill: auto;
+  column-fill: auto; }
+
+.qrcode {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.twitter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  margin-bottom: 30px; }
+
+#main {
+  display: table;
+  width: 100%;
+  height: 100%; }
+
+.error {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+
+.error .code {
+  font-size: 1600%;
+  font-weight: bold; }
+
+.error .message {
+  font-size: 400%; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-family: "Myriad Pro", Calibri, Helvetica, Arial, sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
