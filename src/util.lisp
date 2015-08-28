@@ -1,25 +1,18 @@
 (defpackage hinario-espirita.util
   (:use cl
-        hinario-espirita.readtable
+        cool-read-macros
         rutil)
   (:import-from cl-locale
                 *locale*
                 current-dictionary
-                define-dictionary))
+                define-dictionary)
+  (:import-from let-over-lambda
+                if-match)
+  (:export &))
 (in-package hinario-espirita.util)
-(in-readtable web-syntax)
+(in-readtable cool-readtable)
 
-(defmacro abbrevs (&body body)
-  (let ((pairs (group 2 body)))
-   `(progn
-      ,@(mapcar #`(abbr ,(car a1) ,(cadr a1))
-                pairs)
-       (export ',(mapcar [car _] pairs)))))
-
-(abbrevs & strcat
-         mp mapcar
-         def defparameter
-         strd string-downcase)
+(abbr & strcat)
 
 @export
 (defun spit (str file &key (if-exists :supersede))
@@ -29,21 +22,12 @@
     (princ str f)))
 
 @export
-(defun get-music-key (path-or-string)
-  (let ((str (etypecase path-or-string
-               (pathname (uiop:read-file-string path-or-string))
-               (string path-or-string))))
-    (mv-bind (match capture)
-        (#~m/^%TONALIDADE=(.*)/ str)
-      (declare (ignore match))
-      (aref capture 0))))
+(defmethod get-music-key ((path-or-string string))
+  (if-match (#~m/^%TONALIDADE=(.*)/ path-or-string)
+      $1))
 
-@export
-(defmacro defvar-unbound (name &optional (doc-string ""))
-  `(progn
-     (defvar ,name)
-     (setf (documentation ',name 'variable) ,doc-string)
-     ',name))
+(defmethod get-music-key ((path-or-string pathname))
+  (get-music-key (uiop:read-file-string path-or-string)))
 
 @export
 (defparameter *i18n-route* "")
@@ -54,7 +38,7 @@
 
 @export
 (defun link-to (url)
-  (& "http://hinarioespirita.com.br" *i18n-route* url))
+  (root-link-to (& *i18n-route* url)))
 
 @export
 (defparameter *langs*
@@ -67,7 +51,7 @@
      (caveman2:defroute ,route ,args
        (let ((*i18n-route* ""))
         ,@body))
-     ,@(mp #`(caveman2:defroute ,(if (stringp route)
+     ,@(mapcar #`(caveman2:defroute ,(if (stringp route)
                                          (& "/" a1 route)
                                          `(,(& "/" a1 (car route)) ,@(cdr route)))
                      ,args
@@ -76,7 +60,7 @@
                          `((let ((*locale* ,(mkeyw a1))
                                  (*i18n-route* ,(& "/" a1)))
                              ,@body))))
-           (mp #'car *langs*))))
+           (mapcar #'car *langs*))))
 
 @export
 (defun redirect (url)
@@ -85,7 +69,7 @@
 @export
 (defmacro defdictionary (dict-name root)
   `(define-dictionary ,dict-name
-     ,@(mp #`(,(mkeyw a1)
-               (merge-pathnames ,(merge-pathnames (& (string-downcase a1) ".lisp") "i18n/")
+     ,@(mapcar #`(,(mkeyw a1)
+               (merge-pathnames ,(merge-pathnames (& (string-downcase a1) ".lisp") "src/i18n/")
                                  ,root))
-           (mp #'car *langs*))))
+           (mapcar #'car *langs*))))

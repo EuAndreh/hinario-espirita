@@ -23,7 +23,7 @@
  ("Hinário" . "Hinário")
  ("Cifras" . "Cifras")
  ("Transparências" . "Transparências")
- ("Slides" . "Slides") ;; "<i>Slides</i>"
+ ("Slides" . "Slides")
  ("Hinário(boneco)" . "Hinário(boneco)")
  ("Cifras(boneco)" . "Cifras(boneco)")
  ("download" . "Faça o download das partituras, com seus respectivos áudios:")

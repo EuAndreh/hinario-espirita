@@ -1,6 +1,6 @@
 (defpackage hinario-espirita.web
   (:use cl
-        hinario-espirita.readtable
+        cool-read-macros
         hinario-espirita.util
         hinario-espirita.config
         hinario-espirita.view
@@ -15,7 +15,7 @@
   (:import-from hinario-espirita.scripts
                 hinarios))
 (in-package hinario-espirita.web)
-(in-readtable web-syntax)
+(in-readtable cool-readtable)
 
 (setf *locale* :pt)
 

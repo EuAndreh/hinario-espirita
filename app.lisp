@@ -2,10 +2,10 @@
 
 (defpackage hinario-espirita.app
   (:use cl
-        hinario-espirita.readtable
+        cool-read-macros
         hinario-espirita.config))
 (in-package hinario-espirita.app)
-(in-readtable web-syntax)
+(in-readtable cool-readtable)
 
 (lack:builder
  (:static

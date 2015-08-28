@@ -1,14 +1,14 @@
 (defpackage hinario-espirita.scaffolds
   (:use cl
-        hinario-espirita.readtable
+        cool-read-macros
         hinario-espirita.util
         rutil)
   (:import-from cl-locale
                 i18n))
 (in-package hinario-espirita.scaffolds)
-(in-readtable web-syntax)
+(in-readtable cool-readtable)
 
-(def skeleton #"
+(defparameter skeleton #"
 \documentclass[~a]{article}
 \usepackage[portuguese]{babel}
 \usepackage{pdfpages}
@@ -39,7 +39,7 @@
 
 \end{document}"#)
 
-(def paper-margin #"
+(defparameter paper-margin #"
 \setlength{\oddsidemargin}{0in}
 \setlength{\evensidemargin}{0in}
 \setlength{\textwidth}{6.5in}
@@ -50,7 +50,7 @@
 \setlength{\textheight}{9.1in}
 \settowidth{\versenumwidth}{1.\ }"#)
 
-(def transparencias-margin+stuff #"
+(defparameter transparencias-margin+stuff #"
 \setlength{\oddsidemargin}{-0.5in}
 \setlength{\evensidemargin}{-0.5in}
 \setlength{\textwidth}{7.5in}
@@ -81,7 +81,7 @@
 \renewcommand{\versemark}{\markboth{}{\thesongnum. \songtitle}}
 \renewcommand{\chorusmark}{\markboth{}{\thesongnum. \songtitle}}"#)
 
-(def slides-margin+stuff #"
+(defparameter slides-margin+stuff #"
 \setlength{\oddsidemargin}{-0.5in}
 \setlength{\evensidemargin}{-0.5in}
 \setlength{\textwidth}{10in}
@@ -119,7 +119,7 @@
   \renewcommand{\chorusmark}{\markboth{\thesongnum. \songtitle}{Chorus}}
 }{}"#)
 
-(def boneco-margin+stuff #"
+(defparameter boneco-margin+stuff #"
 \setlength{\oddsidemargin}{-0.4in}
 \setlength{\evensidemargin}{3in} % CifrasBoneco é 3in
 \setlength{\textwidth}{7.7in}
@@ -152,7 +152,7 @@
 
 (defmacro def-get (&rest names)
   `(progn
-     ,@(mp #`(defun ,a1 (name)
+     ,@(mapcar #`(defun ,a1 (name)
                (funcall (get# ,(mkeyw a1) (get# name %scaffolds))))
            names)
      (export ',names)))
@@ -161,8 +161,8 @@
   `(progn
      (set# ,name %scaffolds
             {:tex [fmt skeleton ,@args]
-             :pdf [i18n ,(strd (& name ".pdf"))]
-             :name [i18n ,(strd name)]})))
+             :pdf [i18n ,(string-downcase (& name ".pdf"))]
+             :name [i18n ,(string-downcase name)]})))
 
 (def-get pdf tex name)
 

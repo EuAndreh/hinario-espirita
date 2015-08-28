@@ -12,39 +12,23 @@
   :description "Spiritist Songbook website."
   :depends-on (arrow-macros
                caveman2
-               cl-annot
-               cl-heredoc
-               cl-interpol
-               cl-ppcre
                cl-locale
-               cl-markup
                cl-qrencode
-               cl-reexport
-               cl-slug
                clack
-               clesh
+               cool-read-macros
                envy
+               inferior-shell
                lack
                lack-middleware-accesslog
                lack-middleware-backtrace
                lack-middleware-session
                let-over-lambda
-               named-readtables
                rock
                rutils
                uuid)
-  :components ((:file "rock")
-               (:module "static"
+  :components ((:module "src"
                         :components
-                        ((:module "css"
-                                  :components
-                                  ((:sass-indent "style")))
-                         (:module "js"
-                                  :components
-                                  ((:coffee "script")))))
-               (:module "src"
-                        :components
-                        ((:file "readtable")
+                        ((:file "rock")
                          (:file "util")
                          (:file "config")
                          (:file "view")
@@ -52,8 +36,16 @@
                          (:file "scripts")
                          (:file "web")
                          (:file "main")))
+               (:module "static"
+                        :components
+                        ((:module "css"
+                                  :components
+                                  ((:sass-strict "style")))
+                         (:module "js"
+                                  :components
+                                  ((:coffee "script")))))
                (:static-file "README.md"))
   :defsystem-depends-on (asdf-linguist)
   :long-description #.(uiop:read-file-string
-                       (uiop:subpathname *load-pathname* "README.md"))
+                       (uiop:subpathname *load-truename* "README.md"))
   :in-order-to ((test-op (test-op hinario-espirita-test))))

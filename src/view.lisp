@@ -1,12 +1,12 @@
 (defpackage hinario-espirita.view
   (:use cl
-        hinario-espirita.readtable
+        cool-read-macros
         hinario-espirita.util
         arrow-macros
         rutil)
   (:import-from cl-locale
                 i18n
-                l10n)
+                i18n-unformatted)
   (:import-from hinario-espirita.config
                 *application-root*
                 *static-directory*)
@@ -18,8 +18,7 @@
                 html5
                 markup))
 (in-package hinario-espirita.view)
-(in-readtable web-syntax)
-
+(in-readtable cool-readtable)
 
 (defmacro defhtml (name args title &body body)
   `(defun ,name ,args
@@ -50,7 +49,7 @@
 
 (defun gen-nav-li (items-list &key (pre "") (class ""))
   #m(:div
-     (mp [let ((pdf (& _ ".pdf")))
+     (mapcar [let ((pdf (& _ ".pdf")))
            #m(:li
               (:a :href (& pre pdf)
                   :title pdf
@@ -68,7 +67,7 @@
 (defhtml index ()
     #i"título"
     (:div
-       (mp [let ((lname (cdr _)))
+       (mapcar [let ((lname (cdr _)))
              #m(:a :href (root-link-to (fmt "/~a/" (car _)))
                    :title lname
                    lname)]
@@ -76,7 +75,7 @@
     (:h1 (:a :href (link-to "/") :title #i"início"
              #i"título"))
     (:ul :class "nav"
-         (gen-nav-li (mp [merge-pathnames _ "/pdf/"]
+         (gen-nav-li (mapcar [merge-pathnames _ "/pdf/"]
                          '("Hinário" "Cifras" "Transparências" "Slides")))
          :br
          (:a :class "partituras" :href "/partituras" :title #i"partituras"
@@ -87,7 +86,7 @@
         #i"atualizado")
     (:p  #i"impressão")
     (:ul :class "nav"
-         (gen-nav-li (mp [merge-pathnames _ "/pdf/"]
+         (gen-nav-li (mapcar [merge-pathnames _ "/pdf/"]
                          '("Hinário(boneco)" "Cifras(boneco)"))))
     (:h2 (:a :href "criar" :class "criar"
              #i"crie"))
@@ -105,7 +104,7 @@
              "Hinário Espírita"))
     (:h2 #i"download")
     #m(:div
-       (mp [let ((f (pathname-name _)))
+       (mapcar [let ((f (pathname-name _)))
              #m(:p :class "music-data"
                    f
                    :br
@@ -125,12 +124,12 @@
 (defparameter *major-keys* #w(C C# D E♭ E F F# G A♭ A B♭ b ))
 
 @export
-(defparameter *minor-keys* (mp [fmt "~am" _]
-                                   #w(c c# d e♭ e f f# g a♭ a b♭ b)))
+(defparameter *minor-keys* (mapcar [fmt "~am" _]
+                               #w(c c# d e♭ e f f# g a♭ a b♭ b)))
 
 (defun all-songs-html (lang)
   #m(:ul :class "columns"
-         (mp (lambda (tex)
+         (mapcar (lambda (tex)
                #m(:li (:input :type "checkbox"
                               :name (fmt "songs[~a][]" lang)
                               :class "checkbox"
@@ -141,7 +140,7 @@
                                 (aref capture 0)))
                       (:select :name (fmt "keys[~a][~a]" lang (pathname-name tex))
                                (let ((tonalidade (get-music-key tex)))
-                                 (mp [fmt "<option value='~a' selected>~a</option>"
+                                 (mapcar [fmt "<option value='~a' selected>~a</option>"
                                           _
                                           (if (string= _ tonalidade)
                                               " selected"
@@ -186,11 +185,11 @@
                         (fourth tokens)
                         (third tokens))))
          (:ul :class "nav"
-              (gen-nav-li (mp [merge-pathnames (i18n _) path]
+              (gen-nav-li (mapcar [merge-pathnames (i18n _) path]
                               '("Hinário" "Cifras" "Transparências" "Slides"))
                           :pre "/")
               :br
-              (gen-nav-li (mp [merge-pathnames (i18n _) path]
+              (gen-nav-li (mapcar [merge-pathnames (i18n _) path]
                               '("Hinário(boneco)" "Cifras(boneco)"))
                           :pre "/"
                           :class "boneco"))

@@ -4,10 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/EuAndreh/hinario-espirita/badge.svg?branch=master)](https://coveralls.io/r/EuAndreh/hinario-espirita?branch=master)
 
 ## TODO
-- Rock
-- qlot
-- Roswell. ros scripts?... in process
-- roswell + Server::Starter: start_server clackup
+- Rock: funcionar + codex
+- qlot: refactor(funcionar) + codex(codex package docstrings)
 - refactor sass: deixar link ser comprido, footer layout, teirar borda do qrcode
 - add docstrings
 - refactor scripts: consertar bonecos
@@ -19,7 +17,6 @@
 - Fazer favicon
 - fazer codex
 - Clake?
-- Fazer uma struct de idioma
 - Usar digital ocean
 
 ## Usage
