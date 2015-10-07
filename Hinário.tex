@@ -1,0 +1,34 @@
+\documentclass[a4]{article}
+\usepackage[portuguese]{babel}
+\usepackage{pdfpages}
+\usepackage[bookmarks]{hyperref}
+\usepackage[lyric]{songs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{etoolbox}
+\patchcmd{\showauthors}{\bfseries}{\itshape\normalsize}{}{}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\topskip}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.1in}
+\settowidth{\versenumwidth}{1.\ }
+
+\newindex{titleidx}{IndiceHinario}
+%\indexsongsas{titleidx}{\thepage}
+\titleprefixword{}
+
+\begin{document}
+\includepdf[pages={1}]{Capa/Capa.pdf}
+\showindex{Índice de Músicas \\ \large{\today} \\ \small{(Os números são clicáveis)}}{titleidx}
+\begin{songs}{titleidx}
+\input{musicas.sbd}
+\end{songs}
+
+\end{document}
