@@ -9,7 +9,19 @@ melodia = \relative c' {
   \tempo 4 = 110
 
   fis8 g4 fis8 fis8 e4 d8 e8 fis4 fis8 fis8 e8 d8 e8
-  fis8 g 4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
+  fis8 g4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
+  
+  fis8 g4 fis8 fis8 e4 d8 e8 fis4 fis8 fis4. d8
+  fis8 g4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
+  
+ 
+  fis2 g2 a2 b2 cis2 d2~ d2 r4 d,8 e8
+
+  fis2 g2 a2 b2 cis2  d2~  d2. r4
+
+  
+  fis,8 g4 fis8 fis8 e4 d8 e8 fis4 fis8 fis8 e8 d8 e8
+  fis8 g4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
   
   fis8 g4 fis8 fis8 e4 d8 e8 fis4 fis8 fis4. d8
   fis8 g4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
@@ -42,20 +54,48 @@ letra = \lyricmode {
   que cui -- da de nós pa -- ci -- en -- te.
   
   Es -- pe -- ran -- do nos -- sos bro -- tos
-%  A -- guar -- dan -- do a pri -- ma -- ve -- ra
-%  Pois tem certeza que
-%As nossas flores
-%Um dia irão nascer
-%Em paz vão florescer
-%E seu perfume vai se espalhar
-%E será festa em cada coração
-%Em que nascer a flor
-%Plantada pelo mestre com amor
+  A -- guar -- dan -- do-a pri -- ma -- ve -- ra
+
+  Há-um jar di -- nei -- ro que plan -- ta jar -- dins em ou -- tra 
+  ter -- ra com ou -- tra se -- men -- te,
+  
+  que cul -- ti -- va suas flo -- res em vo -- cê e-em mim,
+  que cui -- da de nós pa -- ci -- en -- te.
+  
+  Es -- pe -- ran -- do nos -- sos bro -- tos
+  A -- guar -- dan -- do-a pri -- ma -- ve -- ra
+  Pois tem cer -- te -- za que
+  
+  As nos -- sas flo -- res
+  Um dia i -- rão nas -- cer
+  Em paz vão flo -- res -- cer
+  E seu per -- fu -- me vai se es -- pa -- lhar
+
+  E se -- rá fes -- ta em ca -- da co -- ra -- ção
+  Em que nas -- cer a flor
+  Plan -- ta -- da pe -- lo mes -- tre com a -- 		mor
 
 }
 
+harmonia = \chordmode {
+  \set majorSevenSymbol = \markup { 7M }
+  
+  
+  d1:9 d:maj7 d:9 d:maj7 d:9 d:maj7 d:9 d:maj7 d:9 d:maj7 d:9 d:maj7
+  
+  d:9 d/cis b:m7 a:7 d:9 d/cis b:m7 a:7
+
+  g:maj7 d/fis e:m7
+  
+}
+
+
 \score {
-  <<
+    \new ChoirStaff <<
+    \new ChordNames {
+      \harmonia
+    }
+
     \new Staff <<
       \new Voice = "melodia" { \melodia }
       \lyricsto "melodia" \new Lyrics \letra
