@@ -13,23 +13,24 @@ vozedois = \relative c' {
   a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 |
   a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 |
   
-  fis,8 g4 fis8 fis8 e4 d8 e8 fis4 fis8 fis8 e8 d8 e8
-  fis8 g4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
+  fis,8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis8 e8 d8 e8 |
+  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
-  fis8 g4 fis8 fis8 e4 d8 e8 fis4 fis8 fis4. d8
-  fis8 g4 fis8 fis8 e4 d8 cis4. d8 r4 d8 e8
+  fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis4. d8 |
+  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
-  fis2 g2 a2 b2 cis2 d2~ d2 r4 d,8 e8
-  fis2 g2 a2 b2 cis2  d2~  d2. r8 d,8
+  fis2 g2 | a2 b2 | cis2 d2~ | d2 r4 d,8 e8 |
+  fis2 g2 | a2 b2 | cis2 d2~ | d2. r8  d,8 |
 
-  g4. fis4 e4 d8 a'2 r8 d,8 d8 d8
+  g4. fis4 e4 d8 | a'2 r8 d,8 d8 d8 |
   
-  a'8 d,2. d8 b'8 a4 g4 fis4 e8~ e2.~ e8 a,8
-  a'8 g4 fis4 e4 d8~ d2.~ d8 d8 g8 fis4 e4 d4 a'8~
-  a2 g4 fis8 e8~ e2 r8 d8 d8 d8
-    a'8 d,2. d8 b'8 a4 g4 fis4 e8~ e2.~ e8 a,8
-  a'8 g4 fis4 e4 d8~ d2.~ d8 d8 g8 fis4 e4 d4 a'8~
-  a2 g4 fis8 e8~ e2. r4
+  a'8 d,2. d8 | b'8 a4 g4 fis4 e8~ | e2.~ e8 a,8 |
+  a'8 g4 fis4 e4 d8~ | d2.~ d8 d8 | g8 fis4 e4 d4 a'8~ |
+  a2 g4 fis8 e8~ | e2 r8 d8 d8 d8 |
+  
+  a'8 d,2. d8 | b'8 a4 g4 fis4 e8~ | e2.~ e8 a,8 |
+  a'8 g4 fis4 e4 d8~ | d2.~ d8 d8 | g8 fis4 e4 d4 a'8~ |
+  a2 g4 fis8 e8~ | e2. r4 |
 }
 
 melodia = \relative c' {
@@ -43,7 +44,7 @@ melodia = \relative c' {
   fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis4. d8 |
   fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
-  fis2 g2 | a2 b2 | cis2 d2~ | d2 r4 | d,8 e8
+  fis2 g2 | a2 b2 | cis2 d2~ | d2 r4  d,8 e8 |
   fis2 g2 | a2 b2 | cis2 d2~ | d2. r4|
 
   
@@ -53,18 +54,18 @@ melodia = \relative c' {
   fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis4. d8 |
   fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
-  fis2 g2 | a2 b2 | cis2 d2~ | d2 r4 | d,8 e8 |
-  fis2 g2 | a2 b2 | cis2 d2~ | d2. r8 | d,8 |
+  fis2 g2 | a2 b2 | cis2 d2~ | d2 r4 d,8 e8 |
+  fis2 g2 | a2 b2 | cis2 d2~ | d2. r8  d,8 |
 
   g4. fis4 e4 d8 | a'2 r8 d,8 d8 d8 |
   
-  a'8 d,2. d8 b'8 a4 g4 fis4 e8~ e2.~ e8 a,8
-  a'8 g4 fis4 e4 d8~ d2.~ d8 d8 g8 fis4 e4 d4 a'8~
-  a2 g4 fis8 e8~ e2 r8 d8 d8 d8
-    a'8 d,2. d8 b'8 a4 g4 fis4 e8~ e2.~ e8 a,8
-  a'8 g4 fis4 e4 d8~ d2.~ d8 d8 g8 fis4 e4 d4 a'8~
-  a2 g4 fis8 e8~ e2. r4
+  a'8 d,2. d8 | b'8 a4 g4 fis4 e8~ | e2.~ e8 a,8 |
+  a'8 g4 fis4 e4 d8~ | d2.~ d8 d8 | g8 fis4 e4 d4 a'8~ |
+  a2 g4 fis8 e8~ | e2 r8 d8 d8 d8 |
   
+  a'8 d,2. d8 | b'8 a4 g4 fis4 e8~ | e2.~ e8 a,8 |
+  a'8 g4 fis4 e4 d8~ | d2.~ d8 d8 | g8 fis4 e4 d4 a'8~ |
+  a2 g4 fis8 e8~ | e2. r4 |
 }
 
 
