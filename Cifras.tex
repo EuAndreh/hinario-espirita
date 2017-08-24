@@ -10,6 +10,8 @@
 \usepackage{etoolbox}
 \patchcmd{\showauthors}{\bfseries}{\itshape\normalsize}{}{}
 
+\newcommand{\songlink}[2]{\hyperlink{#1}{#2}}
+
 \setlength{\oddsidemargin}{0in}
 \setlength{\evensidemargin}{0in}
 \setlength{\textwidth}{6.5in}
@@ -19,6 +21,7 @@
 \setlength{\headsep}{0in}
 \setlength{\textheight}{9.1in}
 \settowidth{\versenumwidth}{1.\ }
+
 
 \newindex{titleidx}{IndiceCifras}
 \titleprefixword{}
