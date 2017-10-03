@@ -3,6 +3,33 @@
   composer = "Willi de Barros"
 }
 
+vozetres = \relative c' {
+  \key d \major
+  \time 4/4
+  \tempo 4 = 110
+  
+  r1 | r1 |r1 | r1 |r1 | r1 |r1 | r2. d8 e8 |
+  
+  fis2 b2 | cis2 d2 | e2 fis2~ | fis2 r4  d,8 e8 |
+  fis2 b2 | cis2 d2 | e2 fis2~ | fis2. r4|
+  
+  r1 | r1 |r1 | r1 |r1 | r1 |r1 | r2. d,8 e8 |
+  
+  fis2 b2 | cis2 d2 | e2 fis2~ | fis2 r4  d,8 e8 |
+  fis2 b2 | cis2 d2 | e2 fis2~ | fis2. r4|
+  
+  r1 | r1 | 
+  
+  r4. fis,4 d4. | 
+  r4. d4 e4 fis8 | e1 |
+  r4. b4 cis4 e8 | d1 |
+  r4. d4 d4 d8 | d2 d4 d8 cis8~ | cis2 r2 |
+  
+  r4. fis 4 d4. | 
+  r4. d4 e4 fis8 | e1 |
+  r4. b4 cis4 e8 | d1 |
+  r2 r8 d4 d8 | d2 d4 d8 cis8~ | cis2. r4 |
+}
 vozedois = \relative c' {
   \key d \major
   \time 4/4
@@ -13,11 +40,11 @@ vozedois = \relative c' {
   a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 |
   a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 | a8 r4 a8 r2 |
   
-  fis,8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis8 e8 d8 e8 |
-  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
+  \tuplet 3/2 {fis,4 g4 fis4} fis8 e4 d8 | \tuplet 3/2 {e4 fis4 fis4} fis8 e8 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} \tuplet 3/2 {fis4 e4 d4} | cis4. d8 r4 d8 e8 |
   
-  fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis4. d8 |
-  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | \tuplet 3/2 {e4 fis4 fis4} fis4. d8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
   fis2 g2 | a2 b2 | cis2 d2~ | d2 r4 d,8 e8 |
   fis2 g2 | a2 b2 | cis2 d2~ | d2. r8  d,8 |
@@ -38,21 +65,21 @@ melodia = \relative c' {
   \time 4/4
   \tempo 4 = 110
 
-  fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis8 e8 d8 e8 |
-  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | \tuplet 3/2 {e4 fis4 fis4} fis8 e8 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} \tuplet 3/2 {fis4 e4 d4} | cis4. d8 r4 d8 e8 |
   
-  fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis4. d8 |
-  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | \tuplet 3/2 {e4 fis4 fis4} fis4. d8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
   fis2 g2 | a2 b2 | cis2 d2~ | d2 r4  d,8 e8 |
   fis2 g2 | a2 b2 | cis2 d2~ | d2. r4|
 
   
-  fis,8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis8 e8 d8 e8 |
-  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
+  \tuplet 3/2 {fis,4 g4 fis4} fis8 e4 d8 | \tuplet 3/2 {e4 fis4 fis4} fis8 e8 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} \tuplet 3/2 {fis4 e4 d4} | cis4. d8 r4 d8 e8 |
   
-  fis8 g4 fis8 fis8 e4 d8 | e8 fis4 fis8 fis4. d8 |
-  fis8 g4 fis8 fis8 e4 d8 | cis4. d8 r4 d8 e8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | \tuplet 3/2 {e4 fis4 fis4} fis4. d8 |
+  \tuplet 3/2 {fis4 g4 fis4} fis8 e4 d8 | cis4. d8 r4 d8 e8 |
   
   fis2 g2 | a2 b2 | cis2 d2~ | d2 r4 d,8 e8 |
   fis2 g2 | a2 b2 | cis2 d2~ | d2. r8  d,8 |
@@ -102,6 +129,31 @@ letra = \lyricmode {
 
 }
 
+letravozdois = \lyricmode {
+  Ah -- Ah  Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah
+  Ah -- Ah  Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah Ah -- Ah
+  
+  Há-um jar di -- nei -- ro que plan -- ta jar -- dins em ou -- tra 
+  ter -- ra com ou -- tra se -- men -- te,
+  
+  que cul -- ti -- va suas flo -- res em vo -- cê e-em mim,
+  que cui -- da de nós pa -- ci -- en -- te.
+  
+  Es -- pe -- ran -- do nos -- sos bro -- tos
+  A -- guar -- dan -- do-a pri -- ma -- ve -- ra
+  Pois tem cer -- te -- za que
+  
+  As nos -- sas flo -- res
+  Um dia i -- rão nas -- cer
+  Em paz vão flo -- res -- cer
+  E seu per -- fu -- me vai se-es -- pa -- lhar
+
+  E se -- rá fes -- ta em ca -- da co -- ra -- ção
+  Em que nas -- cer a flor
+  Plan -- ta -- da pe -- lo mes -- tre com-a -- mor
+
+}
+
 harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
   
@@ -126,7 +178,6 @@ harmonia = \chordmode {
       \harmonia
     }
 
-
     \new Staff <<
       \new Voice = "melodia" { \melodia }
       \lyricsto "melodia" \new Lyrics \letra
@@ -136,8 +187,15 @@ harmonia = \chordmode {
     \new Staff <<
       \new Voice = "vozedois" <<
         \vozedois
+        \lyricsto "vozedois" \new Lyrics \letravozdois
       >>
         >>
+    \new Staff <<
+      \new Voice = "vozetres" <<
+        \vozetres
+      >>
+        >>
+    
     
     >>
     
