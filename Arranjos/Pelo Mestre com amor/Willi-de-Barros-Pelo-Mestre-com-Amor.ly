@@ -13,8 +13,13 @@ vozetres = \relative c' {
   fis2 b2 | cis2 d2 | e2 fis2~ | fis2 r4  d,8 e8 |
   fis2 b2 | cis2 d2 | e2 fis2~ | fis2. r4|
   
-  r1 | r1 |r1 | r1 |r1 | r1 |r1 | r2. d,8 e8 |
+  \tuplet 3/2 {a,4 b4 a4} a8 g4 fis8 | \tuplet 3/2 {g4 a4 a4} a8 g8 fis 8 g8 |
+  \tuplet 3/2 {a4 b4 a4} \tuplet 3/2 {a4 g4 fis4} | e4. fis8 r4 fis8 g8 |
   
+  \tuplet 3/2 {a4 b4 a4} a8 g4 fis8 | \tuplet 3/2 {g4 a4 a4} a4. fis8 |
+  \tuplet 3/2 {a4 b4 a4} \tuplet 3/2 {a4 g4 fis4} | e4. fis8 r4 d8 e8 |
+  
+
   fis2 b2 | cis2 d2 | e2 fis2~ | fis2 r4  d,8 e8 |
   fis2 b2 | cis2 d2 | e2 fis2~ | fis2. r4|
   
@@ -154,6 +159,36 @@ letravozdois = \lyricmode {
 
 }
 
+letravoztres = \lyricmode {
+  
+  Es -- pe -- ran -- do nos -- sos bro -- tos
+  A -- guar -- dan -- do-a pri -- ma -- ve -- ra
+  
+  Há-um jar di -- nei -- ro que plan -- ta jar -- dins em ou -- tra 
+  ter -- ra com ou -- tra se -- men -- te,
+  
+  que cul -- ti -- va suas flo -- res em vo -- cê e-em mim,
+  que cui -- da de nós pa -- ci -- en -- te.
+  
+  
+  Es -- pe -- ran -- do nos -- sos bro -- tos
+  A -- guar -- dan -- do-a pri -- ma -- ve -- ra
+  
+  
+  
+  Flo -- res
+  I -- rão nas -- cer
+  Vão flo -- res -- cer
+  Per -- fu -- me vai se-es -- pa -- lhar
+
+  Fes -- ta 
+  No co -- ra -- ção
+  Nas -- cer a flor
+  Pe -- lo mes -- tre com-a -- mor
+
+}
+
+
 harmonia = \chordmode {
   \set majorSevenSymbol = \markup { 7M }
   
@@ -182,17 +217,22 @@ harmonia = \chordmode {
       \new Voice = "melodia" { \melodia }
       \lyricsto "melodia" \new Lyrics \letra
       \set Staff.midiInstrument = #"acoustic grand"
+      \set Staff.instrumentName = #"1ª voz"
     >>
     
     \new Staff <<
       \new Voice = "vozedois" <<
         \vozedois
         \lyricsto "vozedois" \new Lyrics \letravozdois
+        \set Staff.instrumentName = #"2ª voz"
+
       >>
         >>
     \new Staff <<
       \new Voice = "vozetres" <<
         \vozetres
+        \lyricsto "vozetres" \new Lyrics \letravoztres
+        \set Staff.instrumentName = #"3ª voz"
       >>
         >>
     
