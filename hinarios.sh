@@ -9,9 +9,9 @@ printf "pronto.\n"
 
 gen_song() {
   printf "Gerando '%b.pdf'... " "$1"
-  pdflatex "$1.tex" > /dev/null
-  songidx "Indice$(echo $1 | sed 'y/áê/ae/').sxd" 2> /dev/null
-  pdflatex "$1.tex" > /dev/null
+  pdflatex -halt-on-error "$1.tex" > /dev/null
+  texlua songidx.lua "Indice$(echo $1 | sed 'y/áê/ae/').sxd" 2> /dev/null
+  pdflatex -halt-on-error "$1.tex" > /dev/null
 }
 
 gen_latex() {

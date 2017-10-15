@@ -5,3 +5,4 @@ LilyPond/*.pdf
 LilyPond/*.midi
 LilyPond/*.mp3
 limbo/*
+.log
